@@ -1,0 +1,2059 @@
+
+
+<!doctype html>
+<html class="no-js" lang="es-ES" prefix="og: http://ogp.me/ns#">
+	<head>
+		<meta charset="UTF-8"><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"VQcDVFBRCRAEU1BUAwICUVc=",licenseKey:"c72ce647f9",applicationID:"471643573"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(t){try{s.console&&console.log(t)}catch(e){}}var i,o=t("ee"),a=t(25),s={};try{i=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,i.indexOf("dev")!==-1&&(s.dev=!0),i.indexOf("nr_dev")!==-1&&(s.nrDev=!0))}catch(c){}s.nrDev&&o.on("internal-error",function(t){r(t.stack)}),s.dev&&o.on("fn-err",function(t,e,n){r(n.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,e){return t}).join(", ")))},{}],2:[function(t,e,n){function r(t,e,n,r,s){try{p?p-=1:i(s||new UncaughtException(t,e,n),!0)}catch(f){try{o("ierr",[f,c.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function i(t,e){var n=e?null:c.now();o("err",[t,n])}var o=t("handle"),a=t(26),s=t("ee"),c=t("loader"),f=t("gos"),u=window.onerror,d=!1,l="nr@seenError";if(!c.disabled){var p=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(9),t(8),"addEventListener"in window&&t(5),c.xhrWrappable&&t(10),d=!0)}s.on("fn-start",function(t,e,n){d&&(p+=1)}),s.on("fn-err",function(t,e,n){d&&!n[l]&&(f(n,l,function(){return!0}),this.thrown=!0,i(n))}),s.on("fn-end",function(){d&&!this.thrown&&p>0&&(p-=1)}),s.on("internal-error",function(t){o("ierr",[t,c.now(),!0])})}},{}],3:[function(t,e,n){var r=t("loader");r.disabled||(r.features.ins=!0)},{}],4:[function(t,e,n){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var i=t("ee"),o=t("handle"),a=t(9),s=t(8),c="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,w="fn"+h,v="bstTimer",g="pushState",y=t("loader");if(!y.disabled){y.features.stn=!0,t(7),"addEventListener"in window&&t(5);var x=NREUM.o.EV;i.on(m,function(t,e){var n=t[0];n instanceof x&&(this.bstStart=y.now())}),i.on(w,function(t,e){var n=t[0];n instanceof x&&o("bst",[n,e,this.bstStart,y.now()])}),a.on(m,function(t,e,n){this.bstStart=y.now(),this.bstType=n}),a.on(w,function(t,e){o(v,[e,this.bstStart,y.now(),this.bstType])}),s.on(m,function(){this.bstStart=y.now()}),s.on(w,function(t,e){o(v,[e,this.bstStart,y.now(),"requestAnimationFrame"])}),i.on(g+p,function(t){this.time=y.now(),this.startPath=location.pathname+location.hash}),i.on(g+h,function(t){o("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+c]?window.performance[f](u,function(t){o(d,[window.performance.getEntriesByType(l)]),window.performance["c"+c]()},!1):window.performance[f]("webkit"+u,function(t){o(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+c]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}}},{}],5:[function(t,e,n){function r(t){for(var e=t;e&&!e.hasOwnProperty(u);)e=Object.getPrototypeOf(e);e&&i(e)}function i(t){s.inPlace(t,[u,d],"-",o)}function o(t,e){return t[1]}var a=t("ee").get("events"),s=t("wrap-function")(a,!0),c=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";e.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(i(window),i(f.prototype)),a.on(u+"-start",function(t,e){var n=t[1],r=c(n,"nr@wrapped",function(){function t(){if("function"==typeof n.handleEvent)return n.handleEvent.apply(n,arguments)}var e={object:t,"function":n}[typeof n];return e?s(e,"fn-",null,e.name||"anonymous"):n});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],6:[function(t,e,n){function r(t,e,n){var r=t[e];"function"==typeof r&&(t[e]=function(){var t=o(arguments),e={};i.emit(n+"before-start",[t],e);var a;e[m]&&e[m].dt&&(a=e[m].dt);var s=r.apply(this,t);return i.emit(n+"start",[t,a],s),s.then(function(t){return i.emit(n+"end",[null,t],s),t},function(t){throw i.emit(n+"end",[t],s),t})})}var i=t("ee").get("fetch"),o=t(26),a=t(25);e.exports=i;var s=window,c="fetch-",f=c+"body-",u=["arrayBuffer","blob","json","text","formData"],d=s.Request,l=s.Response,p=s.fetch,h="prototype",m="nr@context";d&&l&&p&&(a(u,function(t,e){r(d[h],e,f),r(l[h],e,f)}),r(s,"fetch",c),i.on(c+"end",function(t,e){var n=this;if(e){var r=e.headers.get("content-length");null!==r&&(n.rxSize=r),i.emit(c+"done",[null,e],n)}else i.emit(c+"done",[t],n)}))},{}],7:[function(t,e,n){var r=t("ee").get("history"),i=t("wrap-function")(r);e.exports=r;var o=window.history&&window.history.constructor&&window.history.constructor.prototype,a=window.history;o&&o.pushState&&o.replaceState&&(a=o),i.inPlace(a,["pushState","replaceState"],"-")},{}],8:[function(t,e,n){var r=t("ee").get("raf"),i=t("wrap-function")(r),o="equestAnimationFrame";e.exports=r,i.inPlace(window,["r"+o,"mozR"+o,"webkitR"+o,"msR"+o],"raf-"),r.on("raf-start",function(t){t[0]=i(t[0],"fn-")})},{}],9:[function(t,e,n){function r(t,e,n){t[0]=a(t[0],"fn-",null,n)}function i(t,e,n){this.method=n,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,n)}var o=t("ee").get("timer"),a=t("wrap-function")(o),s="setTimeout",c="setInterval",f="clearTimeout",u="-start",d="-";e.exports=o,a.inPlace(window,[s,"setImmediate"],s+d),a.inPlace(window,[c],c+d),a.inPlace(window,[f,"clearImmediate"],f+d),o.on(c+u,r),o.on(s+u,i)},{}],10:[function(t,e,n){function r(t,e){d.inPlace(e,["onreadystatechange"],"fn-",s)}function i(){var t=this,e=u.context(t);t.readyState>3&&!e.resolved&&(e.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,g,"fn-",s)}function o(t){y.push(t),h&&(b?b.then(a):w?w(a):(E=-E,R.data=E))}function a(){for(var t=0;t<y.length;t++)r([],y[t]);y.length&&(y=[])}function s(t,e){return e}function c(t,e){for(var n in t)e[n]=t[n];return e}t(5);var f=t("ee"),u=f.get("xhr"),d=t("wrap-function")(u),l=NREUM.o,p=l.XHR,h=l.MO,m=l.PR,w=l.SI,v="readystatechange",g=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],y=[];e.exports=u;var x=window.XMLHttpRequest=function(t){var e=new p(t);try{u.emit("new-xhr",[e],e),e.addEventListener(v,i,!1)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}return e};if(c(p,x),x.prototype=p.prototype,d.inPlace(x.prototype,["open","send"],"-xhr-",s),u.on("send-xhr-start",function(t,e){r(t,e),o(e)}),u.on("open-xhr-start",r),h){var b=m&&m.resolve();if(!w&&!m){var E=1,R=document.createTextNode(E);new h(a).observe(R,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===v||a()})},{}],11:[function(t,e,n){function r(t){if(!s(t))return null;var e=window.NREUM;if(!e.loader_config)return null;var n=(e.loader_config.accountID||"").toString()||null,r=(e.loader_config.agentID||"").toString()||null,f=(e.loader_config.trustKey||"").toString()||null;if(!n||!r)return null;var h=p.generateSpanId(),m=p.generateTraceId(),w=Date.now(),v={spanId:h,traceId:m,timestamp:w};return(t.sameOrigin||c(t)&&l())&&(v.traceContextParentHeader=i(h,m),v.traceContextStateHeader=o(h,w,n,r,f)),(t.sameOrigin&&!u()||!t.sameOrigin&&c(t)&&d())&&(v.newrelicHeader=a(h,m,w,n,r,f)),v}function i(t,e){return"00-"+e+"-"+t+"-01"}function o(t,e,n,r,i){var o=0,a="",s=1,c="",f="";return i+"@nr="+o+"-"+s+"-"+n+"-"+r+"-"+t+"-"+a+"-"+c+"-"+f+"-"+e}function a(t,e,n,r,i,o){var a="btoa"in window&&"function"==typeof window.btoa;if(!a)return null;var s={v:[0,1],d:{ty:"Browser",ac:r,ap:i,id:t,tr:e,ti:n}};return o&&r!==o&&(s.d.tk=o),btoa(JSON.stringify(s))}function s(t){return f()&&c(t)}function c(t){var e=!1,n={};if("init"in NREUM&&"distributed_tracing"in NREUM.init&&(n=NREUM.init.distributed_tracing),t.sameOrigin)e=!0;else if(n.allowed_origins instanceof Array)for(var r=0;r<n.allowed_origins.length;r++){var i=h(n.allowed_origins[r]);if(t.hostname===i.hostname&&t.protocol===i.protocol&&t.port===i.port){e=!0;break}}return e}function f(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.enabled}function u(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.exclude_newrelic_header}function d(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&NREUM.init.distributed_tracing.cors_use_newrelic_header!==!1}function l(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.cors_use_tracecontext_headers}var p=t(22),h=t(13);e.exports={generateTracePayload:r,shouldGenerateTrace:s}},{}],12:[function(t,e,n){function r(t){var e=this.params,n=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<l;r++)t.removeEventListener(d[r],this.listener,!1);e.aborted||(n.duration=a.now()-this.startTime,this.loadCaptureCalled||4!==t.readyState?null==e.status&&(e.status=0):o(this,t),n.cbTime=this.cbTime,u.emit("xhr-done",[t],t),s("xhr",[e,n,this.startTime]))}}function i(t,e){var n=c(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.parsedOrigin=n,t.sameOrigin=n.sameOrigin}function o(t,e){t.params.status=e.status;var n=w(e,t.lastSize);if(n&&(t.metrics.rxSize=n),t.sameOrigin){var r=e.getResponseHeader("X-NewRelic-App-Data");r&&(t.params.cat=r.split(", ").pop())}t.loadCaptureCalled=!0}var a=t("loader");if(a.xhrWrappable&&!a.disabled){var s=t("handle"),c=t(13),f=t(11).generateTracePayload,u=t("ee"),d=["load","error","abort","timeout"],l=d.length,p=t("id"),h=t(18),m=t(17),w=t(14),v=NREUM.o.REQ,g=window.XMLHttpRequest;a.features.xhr=!0,t(10),t(6),u.on("new-xhr",function(t){var e=this;e.totalCbs=0,e.called=0,e.cbTime=0,e.end=r,e.ended=!1,e.xhrGuids={},e.lastSize=null,e.loadCaptureCalled=!1,e.params=this.params||{},e.metrics=this.metrics||{},t.addEventListener("load",function(n){o(e,t)},!1),h&&(h>34||h<10)||window.opera||t.addEventListener("progress",function(t){e.lastSize=t.loaded},!1)}),u.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),u.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid);var n=f(this.parsedOrigin);if(n){var r=!1;n.newrelicHeader&&(e.setRequestHeader("newrelic",n.newrelicHeader),r=!0),n.traceContextParentHeader&&(e.setRequestHeader("traceparent",n.traceContextParentHeader),n.traceContextStateHeader&&e.setRequestHeader("tracestate",n.traceContextStateHeader),r=!0),r&&(this.dt=n)}}),u.on("send-xhr-start",function(t,e){var n=this.metrics,r=t[0],i=this;if(n&&r){var o=m(r);o&&(n.txSize=o)}this.startTime=a.now(),this.listener=function(t){try{"abort"!==t.type||i.loadCaptureCalled||(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof e.onload))&&i.end(e)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}};for(var s=0;s<l;s++)e.addEventListener(d[s],this.listener,!1)}),u.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),u.on("xhr-load-added",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),u.on("xhr-load-removed",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),u.on("addEventListener-end",function(t,e){e instanceof g&&"load"===t[0]&&u.emit("xhr-load-added",[t[1],t[2]],e)}),u.on("removeEventListener-end",function(t,e){e instanceof g&&"load"===t[0]&&u.emit("xhr-load-removed",[t[1],t[2]],e)}),u.on("fn-start",function(t,e,n){e instanceof g&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),u.on("fn-end",function(t,e){this.xhrCbStart&&u.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,e],e)}),u.on("fetch-before-start",function(t){function e(t,e){var n=!1;return e.newrelicHeader&&(t.set("newrelic",e.newrelicHeader),n=!0),e.traceContextParentHeader&&(t.set("traceparent",e.traceContextParentHeader),e.traceContextStateHeader&&t.set("tracestate",e.traceContextStateHeader),n=!0),n}var n,r=t[1]||{};"string"==typeof t[0]?n=t[0]:t[0]&&t[0].url?n=t[0].url:window.URL&&t[0]&&t[0]instanceof URL&&(n=t[0].href),n&&(this.parsedOrigin=c(n),this.sameOrigin=this.parsedOrigin.sameOrigin);var i=f(this.parsedOrigin);if(i&&(i.newrelicHeader||i.traceContextParentHeader))if("string"==typeof t[0]||window.URL&&t[0]&&t[0]instanceof URL){var o={};for(var a in r)o[a]=r[a];o.headers=new Headers(r.headers||{}),e(o.headers,i)&&(this.dt=i),t.length>1?t[1]=o:t.push(o)}else t[0]&&t[0].headers&&e(t[0].headers,i)&&(this.dt=i)}),u.on("fetch-start",function(t,e){this.params={},this.metrics={},this.startTime=a.now(),t.length>=1&&(this.target=t[0]),t.length>=2&&(this.opts=t[1]);var n,r=this.opts||{},o=this.target;"string"==typeof o?n=o:"object"==typeof o&&o instanceof v?n=o.url:window.URL&&"object"==typeof o&&o instanceof URL&&(n=o.href),i(this,n);var s=(""+(o&&o instanceof v&&o.method||r.method||"GET")).toUpperCase();this.params.method=s,this.txSize=m(r.body)||0}),u.on("fetch-done",function(t,e){this.params||(this.params={}),this.params.status=e?e.status:0;var n;"string"==typeof this.rxSize&&this.rxSize.length>0&&(n=+this.rxSize);var r={txSize:this.txSize,rxSize:n,duration:a.now()-this.startTime};s("xhr",[this.params,r,this.startTime])})}},{}],13:[function(t,e,n){var r={};e.exports=function(t){if(t in r)return r[t];var e=document.createElement("a"),n=window.location,i={};e.href=t,i.port=e.port;var o=e.href.split("://");!i.port&&o[1]&&(i.port=o[1].split("/")[0].split("@").pop().split(":")[1]),i.port&&"0"!==i.port||(i.port="https"===o[0]?"443":"80"),i.hostname=e.hostname||n.hostname,i.pathname=e.pathname,i.protocol=o[0],"/"!==i.pathname.charAt(0)&&(i.pathname="/"+i.pathname);var a=!e.protocol||":"===e.protocol||e.protocol===n.protocol,s=e.hostname===document.domain&&e.port===n.port;return i.sameOrigin=a&&(!e.hostname||s),"/"===i.pathname&&(r[t]=i),i}},{}],14:[function(t,e,n){function r(t,e){var n=t.responseType;return"json"===n&&null!==e?e:"arraybuffer"===n||"blob"===n||"json"===n?i(t.response):"text"===n||""===n||void 0===n?i(t.responseText):void 0}var i=t(17);e.exports=r},{}],15:[function(t,e,n){function r(){}function i(t,e,n){return function(){return o(t,[f.now()].concat(s(arguments)),e?null:this,n),e?void 0:this}}var o=t("handle"),a=t(25),s=t(26),c=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(d,function(t,e){u[e]=i(l+e,!0,"api")}),u.addPageAction=i(l+"addPageAction",!0),u.setCurrentRouteName=i(l+"routeName",!0),e.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(p+"tracer",[f.now(),t,n],r),function(){if(c.emit((i?"":"no-")+"fn-start",[f.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw c.emit("fn-err",[arguments,this,t],n),t}finally{c.emit("fn-end",[f.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){h[e]=i(p+e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),o("err",[t,f.now(),!1,e])}},{}],16:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],17:[function(t,e,n){e.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(e){return}}}},{}],18:[function(t,e,n){var r=0,i=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);i&&(r=+i[1]),e.exports=r},{}],19:[function(t,e,n){function r(){return s.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,s=t(27);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],20:[function(t,e,n){function r(t){return!(!t||!t.protocol||"file:"===t.protocol)}e.exports=r},{}],21:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?d("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&d("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||d("cls",[t])})}function a(t){if(t instanceof h&&!w){var e=Math.round(t.timeStamp),n={type:t.type};e<=l.now()?n.fid=l.now()-e:e>l.offset&&e<=Date.now()?(e-=l.offset,n.fid=l.now()-e):e=l.now(),w=!0,d("timing",["fi",e,n])}}function s(t){"hidden"===t&&d("pageHide",[l.now()])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var c,f,u,d=t("handle"),l=t("loader"),p=t(24),h=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){c=new PerformanceObserver(r);try{c.observe({entryTypes:["paint"]})}catch(m){}f=new PerformanceObserver(i);try{f.observe({entryTypes:["largest-contentful-paint"]})}catch(m){}u=new PerformanceObserver(o);try{u.observe({type:"layout-shift",buffered:!0})}catch(m){}}if("addEventListener"in document){var w=!1,v=["click","keydown","mousedown","pointerdown","touchstart"];v.forEach(function(t){document.addEventListener(t,a,!1)})}p(s)}},{}],22:[function(t,e,n){function r(){function t(){return e?15&e[n++]:16*Math.random()|0}var e=null,n=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&(e=r.getRandomValues(new Uint8Array(31)));for(var i,o="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx",a="",s=0;s<o.length;s++)i=o[s],"x"===i?a+=t().toString(16):"y"===i?(i=3&t()|8,a+=i.toString(16)):a+=i;return a}function i(){return a(16)}function o(){return a(32)}function a(t){function e(){return n?15&n[r++]:16*Math.random()|0}var n=null,r=0,i=window.crypto||window.msCrypto;i&&i.getRandomValues&&Uint8Array&&(n=i.getRandomValues(new Uint8Array(31)));for(var o=[],a=0;a<t;a++)o.push(e().toString(16));return o.join("")}e.exports={generateUuid:r,generateSpanId:i,generateTraceId:o}},{}],23:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var s=navigator.userAgent,c=s.match(a);c&&s.indexOf("Chrome")===-1&&s.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}e.exports={agent:i,version:o,match:r}},{}],24:[function(t,e,n){function r(t){function e(){t(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,e,!1)}e.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],25:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],26:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],27:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?f(t,c,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!p.aborted||o){t&&a&&t(n,r,i);for(var s=e(i),c=m(n),f=c.length,u=0;u<f;u++)c[u].apply(s,r);var l=d[y[n]];return l&&l.push([x,n,r,s]),s}}function o(t,e){g[t]=m(t).concat(e)}function h(t,e){var n=g[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return g[t]||[]}function w(t){return l[t]=l[t]||i(n)}function v(t,e){p.aborted||u(t,function(t,n){e=e||"feature",y[n]=e,e in d||(d[e]=[])})}var g={},y={},x={on:o,addEventListener:o,removeEventListener:h,emit:n,get:w,listeners:m,context:e,buffer:v,abort:s,aborted:!1};return x}function o(t){return f(t,c,a)}function a(){return new r}function s(){(d.api||d.feature)&&(p.aborted=!0,d=p.backlog={})}var c="nr@context",f=t("gos"),u=t(25),d={},l={},p=e.exports=i();e.exports.getOrSetContext=o,p.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!O++){var t=S.info=NREUM.info,e=m.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return f.abort();c(E,function(e,n){t[e]||(t[e]=n)});var n=a();s("mark",["onload",n+S.offset],null,"api"),s("timing",["load",n]);var r=m.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=p+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===m.readyState&&o()}function o(){s("mark",["domContent",a()+S.offset],null,"api")}var a=t(19),s=t("handle"),c=t(25),f=t("ee"),u=t(23),d=t(20),l=t(16),p=l.getConfiguration("ssl")===!1?"http":"https",h=window,m=h.document,w="addEventListener",v="attachEvent",g=h.XMLHttpRequest,y=g&&g.prototype,x=!d(h.location);NREUM.o={ST:setTimeout,SI:h.setImmediate,CT:clearTimeout,XHR:g,REQ:h.Request,EV:h.Event,PR:h.Promise,MO:h.MutationObserver};var b=""+location,E={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1210.min.js"},R=g&&y&&y[w]&&!/CriOS/.test(navigator.userAgent),S=e.exports={offset:a.getLastTimestamp(),now:a,origin:b,features:{},xhrWrappable:R,userAgent:u,disabled:x};if(!x){t(15),t(21),m[w]?(m[w]("DOMContentLoaded",o,!1),h[w]("load",r,!1)):(m[v]("onreadystatechange",i),h[v]("onload",r)),s("mark",["firstbyte",a.getLastTimestamp()],null,"api");var O=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,c,f){function nrWrapper(){var o,a,u,l;try{a=this,o=d(arguments),u="function"==typeof r?r(o,a):r||{}}catch(p){i([p,"",[o,a,c],u],t)}s(n+"start",[o,a,c],u,f);try{return l=e.apply(a,o)}catch(h){throw s(n+"err",[o,a,h],u,f),h}finally{s(n+"end",[o,a,l],u,f)}}return a(e)?e:(n||(n=""),nrWrapper[l]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var s,c,f,u="-"===r.charAt(0);for(f=0;f<e.length;f++)c=e[f],s=t[c],a(s)||(t[c]=n(s,u?c+r:r,i,c,o))}function s(n,r,o,a){if(!h||e){var s=h;h=!0;try{t.emit(n,r,o,e,a)}catch(c){i([c,n,r,o],t)}h=s}}return t||(t=u),n.inPlace=r,n.flag=l,n}function i(t,e){e||(e=u);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)p.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[l])}function s(t,e){var n=e(t);return n[l]=t,o(t,n,u),n}function c(t,e,n){var r=t[e];t[e]=s(r,n)}function f(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var u=t("ee"),d=t(26),l="nr@original",p=Object.prototype.hasOwnProperty,h=!1;e.exports=r,e.exports.wrapFunction=s,e.exports.wrapInPlace=c,e.exports.argsToArray=f},{}]},{},["loader",2,12,4,3]);</script>
+        		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="profile" href="http://gmpg.org/xfn/11">
+		<link rel="pingback" href="https://#/gurme/xmlrpc.php">
+								<link rel="apple-touch-icon" sizes="57x57" href="https://#/gurme/wp-content/themes/wp-forgesevilla/library-abc/images/favicon/apple-touch-icon-57x57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="https://#/gurme/wp-content/themes/wp-forgesevilla/library-abc/images/favicon/apple-touch-icon-60x60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="https://#/gurme/wp-content/themes/wp-forgesevilla/library-abc/images/favicon/apple-touch-icon-72x72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="https://#/gurme/wp-content/themes/wp-forgesevilla/library-abc/images/favicon/apple-touch-icon-76x76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="https://#/gurme/wp-content/themes/wp-forgesevilla/library-abc/images/favicon/apple-touch-icon-114x114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="https://#/gurme/wp-content/themes/wp-forgesevilla/library-abc/images/favicon/apple-touch-icon-120x120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="https://#/gurme/wp-content/themes/wp-forgesevilla/library-abc/images/favicon/apple-touch-icon-144x144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="https://#/gurme/wp-content/themes/wp-forgesevilla/library-abc/images/favicon/apple-touch-icon-152x152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="https://#/gurme/wp-content/themes/wp-forgesevilla/library-abc/images/favicon/apple-touch-icon-180x180.png" />
+		<link rel="icon" type="image/png" href="https://#/gurme/wp-content/themes/wp-forgesevilla/library-abc/images/favicon/favicon-32x32.png" sizes="32x32" />
+		<link rel="icon" type="image/png" href="https://#/gurme/wp-content/themes/wp-forgesevilla/library-abc/images/favicon/favicon-194x194.png" sizes="194x194" />
+		<link rel="icon" type="image/png" href="https://#/gurme/wp-content/themes/wp-forgesevilla/library-abc/images/favicon/favicon-96x96.png" sizes="96x96" />
+		<link rel="icon" type="image/png" href="https://#/gurme/wp-content/themes/wp-forgesevilla/library-abc/images/favicon/android-chrome-192x192.png" sizes="192x192">
+		<link rel="icon" type="image/png" href="https://#/gurme/wp-content/themes/wp-forgesevilla/library-abc/images/favicon/favicon-16x16.png" sizes="16x16" />
+		<!--[if IE]>
+			<link rel="shortcut icon" href="https://#/gurme/wp-content/themes/wp-forgesevilla/library-abc/images/favicon/favicon.ico">
+		<![endif]-->
+		<link rel="manifest" href="https://#/gurme/wp-content/themes/wp-forgesevilla/library-abc/images/favicon/manifest.json">
+		<link rel="mask-icon" href="https://#/gurme/wp-content/themes/wp-forgesevilla/library-abc/images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+		<meta name="msapplication-TileColor" content="#da532c">
+		<meta name="msapplication-TileImage" content="https://#/gurme/wp-content/themes/wp-forgesevilla/library-abc/images/favicon/mstile-144x144.png">
+		<meta name="theme-color" content="#ffffff">
+
+		
+        <!--Voonto-->
+        <script
+                src="https://static.vocento.com/voonto2/latest/voonto.js"
+                data-cmp="true"
+				data-kangaroo="false"
+			        >
+        </script>
+
+       
+		<title>20 recetas con verduras para comer sano - Gurmé</title>
+
+<!-- This site is optimized with the Yoast SEO plugin v9.3 - https://yoast.com/wordpress/plugins/seo/ -->
+<meta name="description" content="Las recetas con verduras son siempre una elección muy acertada y sana. Aunque tienen fama de aburridas, nos permiten preparar recetas variadas y sabrosas."/>
+<link rel="canonical" href="index.html" />
+<meta property="og:locale" content="es_ES" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="20 recetas con verduras para comer sano - Gurmé" />
+<meta property="og:description" content="Las recetas con verduras son siempre una elección muy acertada y sana. Aunque tienen fama de aburridas, nos permiten preparar recetas variadas y sabrosas." />
+<meta property="og:url" content="https://#/gurme/las-mejores-recetas/come-sano-con-estas-10-recetas-saludables-con-verduras/" />
+<meta property="og:site_name" content="Gurmé" />
+<meta property="og:image" content="https://#/gurme/wp-content/uploads/sites/24/2014/06/receta-salteado-verduras-1.jpg" />
+<meta property="og:image:secure_url" content="https://#/gurme/wp-content/uploads/sites/24/2014/06/receta-salteado-verduras-1.jpg" />
+<meta property="og:image:width" content="1920" />
+<meta property="og:image:height" content="1080" />
+<meta property="og:image:alt" content="20 recetas con verduras para comer sano" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:description" content="Las recetas con verduras son siempre una elección muy acertada y sana. Aunque tienen fama de aburridas, nos permiten preparar recetas variadas y sabrosas." />
+<meta name="twitter:title" content="20 recetas con verduras para comer sano - Gurmé" />
+<meta name="twitter:image" content="https://#/gurme/wp-content/uploads/sites/24/2014/06/receta-salteado-verduras-1.jpg" />
+<script type='application/ld+json'>{"@context":"https://schema.org","@type":"Organization","url":"https://#/gurme/","sameAs":[],"@id":"https://#/gurme/#organization","name":"Diario ABC de Sevilla","logo":""}</script>
+<script type='application/ld+json'>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://#/gurme/","name":"Gurm\u00e9"}},{"@type":"ListItem","position":2,"item":{"@id":"https://#/gurme/las-mejores-recetas/","name":"Las Mejores Recetas"}},{"@type":"ListItem","position":3,"item":{"@id":"https://#/gurme/las-mejores-recetas/come-sano-con-estas-10-recetas-saludables-con-verduras/","name":"20 recetas con verduras para comer sano"}}]}</script>
+<!-- / Yoast SEO plugin. -->
+
+<link rel='dns-prefetch' href='https://#/' />
+<link rel='dns-prefetch' href='https://a.optnmnstr.com/' />
+<link rel='dns-prefetch' href='https://fonts.googleapis.com/' />
+<link rel='dns-prefetch' href='https://s.w.org/' />
+<link rel="alternate" type="application/rss+xml" title="Gurmé &raquo; Feed" href="https://#/gurme/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Gurmé &raquo; RSS del Archivo Las Mejores Recetas" href="https://#/gurme/las-mejores-recetas/feed/" />
+<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='wpforge-opensans-css'  href='https://fonts.googleapis.com/css?family=Open+Sans%3A300%2C700&amp;ver=5.5.3' type='text/css' media='all' />
+<link rel='stylesheet' id='mvnAlgoliaPrediction-css'  href='maven-algolia/front/assets/styles/predictions.css' type='text/css' media='all' />
+<link rel='stylesheet' id='parent-style-css'  href='wp-forgesevilla/library-abc/css/estilos.css@ver=3.0.css' type='text/css' media='all' />
+<link rel='stylesheet' id='gurme-css'  href='gurmesevilla/style.css@v=20180710.css' type='text/css' media='screen' />
+<link rel='stylesheet' id='gurme-print-css'  href='gurmesevilla/print.css' type='text/css' media='print' />
+<link rel='stylesheet' id='gurme-integracion-css'  href='wp-forgesevilla/css/integracion.css@v=20190722.css' type='text/css' media='screen' />
+<link rel='stylesheet' id='fasc-buttons-style-css'  href='forget-about-shortcode-buttons/assets/css/button-styles.css@ver=1.1.2.css' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-style-css'  href='forget-about-shortcode-buttons/assets/css/font-awesome.min.css@ver=1.1.2.css' type='text/css' media='all' />
+<link rel='stylesheet' id='googleFontsAll-css'  href='https://fonts.googleapis.com/css?family=Lato%3A100%2C300%2C400%2C700%2C900%2C100italic%2C300italic%2C400italic%2C700italic%2C900italic%7CNunito%3A400%2C300%2C700%7CMerriweather%3A400%2C300%2C300italic%2C400italic%2C700%2C700italic%2C900%2C900italic%7CMerriweather+Sans%3A400%2C300%2C300italic%2C400italic%2C700%2C700italic%2C800%2C800italic&#038;ver=4.9.10' type='text/css' media='all' />
+<script type='text/javascript' src='wp-forgesevilla/js/vacio.js@ver=4.9.10'></script>
+<script type='text/javascript' src='wp-forgesevilla/js/vendor/modernizr.js@ver=2.8.3'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var mvnAlgSettings = {"siteUrl":"https:\/\/#\/gurme\/","ajaxUrl":"https:\/\/#\/gurme\/wp-admin\/admin-ajax.php","uploadDirUrl":"https:\/\/ms-sevilla.srv.vocento.in\/gurme\/wp-content\/uploads\/sites\/24\/","appId":"63IVEDX9X5","apiKeySearch":"54c4f1f1314eebe383e493bc6c28f1cc","indexName":"Gurme_Index_pr","showPostCategoriesInPopup":"","showExcerptInPopup":"","excerptMaxChars":"0","indexTaxonomies":"1","postTypesToIndex":{"post":{"indexFeaturedImage":"1","index":"0","taxonomies":{"category":{"isTag":"0","forFaceting":"0","algoliaName":"category"},"post_tag":{"isTag":"0","forFaceting":"0","algoliaName":"post_tag"},"post_format":{"isTag":"0","forFaceting":"0","algoliaName":"post_format"},"base-plato":{"isTag":"0","forFaceting":"0","algoliaName":"base-plato"},"estacionalidad":{"isTag":"0","forFaceting":"0","algoliaName":"estacionalidad"},"calorias":{"isTag":"0","forFaceting":"0","algoliaName":"calorias"},"tipo-plato":{"isTag":"0","forFaceting":"0","algoliaName":"tipo-plato"},"precio":{"isTag":"0","forFaceting":"0","algoliaName":"precio"},"tipo-cocina":{"isTag":"0","forFaceting":"0","algoliaName":"tipo-cocina"},"dificultad":{"isTag":"0","forFaceting":"0","algoliaName":"dificultad"},"tiempo":{"isTag":"0","forFaceting":"0","algoliaName":"tiempo"},"dieta":{"isTag":"0","forFaceting":"0","algoliaName":"dieta"},"tecnicas-cocina":{"isTag":"0","forFaceting":"0","algoliaName":"tecnicas-cocina"},"clasificaciones":{"isTag":"0","forFaceting":"0","algoliaName":"clasificaciones"},"localidad":{"isTag":"0","forFaceting":"0","algoliaName":"localidad"}}},"page":{"indexFeaturedImage":"1","index":"0"},"attachment":{"indexFeaturedImage":"1","index":"0"},"content-promo":{"indexFeaturedImage":"1","index":"0"},"campaign-promo":{"indexFeaturedImage":"1","index":"0"},"receta":{"indexFeaturedImage":"1","index":"1","taxonomies":{"base-plato":{"isTag":"0","forFaceting":"1","algoliaName":"base-plato"},"estacionalidad":{"isTag":"0","forFaceting":"1","algoliaName":"estacionalidad"},"calorias":{"isTag":"0","forFaceting":"1","algoliaName":"calorias"},"tipo-plato":{"isTag":"0","forFaceting":"1","algoliaName":"tipo-plato"},"precio":{"isTag":"0","forFaceting":"1","algoliaName":"precio"},"tipo-cocina":{"isTag":"0","forFaceting":"1","algoliaName":"tipo-cocina"},"dificultad":{"isTag":"0","forFaceting":"1","algoliaName":"dificultad"},"tiempo":{"isTag":"0","forFaceting":"1","algoliaName":"tiempo"},"dieta":{"isTag":"0","forFaceting":"1","algoliaName":"dieta"},"tecnicas-cocina":{"isTag":"0","forFaceting":"1","algoliaName":"tecnicas-cocina"},"clasificaciones":{"isTag":"0","forFaceting":"1","algoliaName":"clasificaciones"}}},"paso-a-paso":{"indexFeaturedImage":"1","index":"1","taxonomies":{"base-plato":{"isTag":"0","forFaceting":"1","algoliaName":"base-plato"},"estacionalidad":{"isTag":"0","forFaceting":"1","algoliaName":"estacionalidad"},"calorias":{"isTag":"0","forFaceting":"1","algoliaName":"calorias"},"tipo-plato":{"isTag":"0","forFaceting":"1","algoliaName":"tipo-plato"},"precio":{"isTag":"0","forFaceting":"1","algoliaName":"precio"},"tipo-cocina":{"isTag":"0","forFaceting":"1","algoliaName":"tipo-cocina"},"dificultad":{"isTag":"0","forFaceting":"1","algoliaName":"dificultad"},"tiempo":{"isTag":"0","forFaceting":"1","algoliaName":"tiempo"},"dieta":{"isTag":"0","forFaceting":"1","algoliaName":"dieta"},"tecnicas-cocina":{"isTag":"0","forFaceting":"1","algoliaName":"tecnicas-cocina"},"clasificaciones":{"isTag":"0","forFaceting":"1","algoliaName":"clasificaciones"}}},"las-mejores-recetas":{"indexFeaturedImage":"1","index":"0","taxonomies":{"base-plato":{"isTag":"0","forFaceting":"1","algoliaName":"base-plato"},"estacionalidad":{"isTag":"0","forFaceting":"1","algoliaName":"estacionalidad"},"calorias":{"isTag":"0","forFaceting":"1","algoliaName":"calorias"},"tipo-plato":{"isTag":"0","forFaceting":"0","algoliaName":"tipo-plato"},"precio":{"isTag":"0","forFaceting":"0","algoliaName":"precio"},"tipo-cocina":{"isTag":"0","forFaceting":"0","algoliaName":"tipo-cocina"},"dificultad":{"isTag":"0","forFaceting":"1","algoliaName":"dificultad"},"tiempo":{"isTag":"0","forFaceting":"1","algoliaName":"tiempo"},"dieta":{"isTag":"0","forFaceting":"1","algoliaName":"dieta"},"tecnicas-cocina":{"isTag":"0","forFaceting":"1","algoliaName":"tecnicas-cocina"},"clasificaciones":{"isTag":"0","forFaceting":"1","algoliaName":"clasificaciones"}}},"actualidad":{"indexFeaturedImage":"1","index":"1"},"actualidad-cordoba":{"indexFeaturedImage":"1","index":"1"},"inenglish":{"indexFeaturedImage":"1","index":"0","taxonomies":{"tipologia":{"isTag":"0","forFaceting":"0","algoliaName":"tipologia"}}},"reportajes":{"indexFeaturedImage":"1","index":"1","taxonomies":{"localidad":{"isTag":"0","forFaceting":"1","algoliaName":"localidad"},"tipologia":{"isTag":"0","forFaceting":"1","algoliaName":"tipologia"}}},"reportajes-cordoba":{"indexFeaturedImage":"1","index":"1","taxonomies":{"localidad":{"isTag":"0","forFaceting":"1","algoliaName":"localidad"},"tipologia":{"isTag":"0","forFaceting":"1","algoliaName":"tipologia"}}},"saber-mas":{"indexFeaturedImage":"1","index":"0"},"ingredientes":{"indexFeaturedImage":"1","index":"0"},"rutas":{"indexFeaturedImage":"1","index":"1","taxonomies":{"recomendadas":{"isTag":"0","forFaceting":"1","algoliaName":"recomendadas"},"localidad":{"isTag":"0","forFaceting":"1","algoliaName":"localidad"}}},"rutas-cordoba":{"indexFeaturedImage":"1","index":"1","taxonomies":{"recomendadas":{"isTag":"0","forFaceting":"1","algoliaName":"recomendadas"},"localidad":{"isTag":"0","forFaceting":"1","algoliaName":"localidad"}}},"opiniones":{"indexFeaturedImage":"1","index":"1","taxonomies":{"tipos":{"isTag":"0","forFaceting":"1","algoliaName":"tipos"},"clasificacion":{"isTag":"0","forFaceting":"1","algoliaName":"clasificacion"},"localidad":{"isTag":"0","forFaceting":"1","algoliaName":"localidad"},"especialidad":{"isTag":"0","forFaceting":"1","algoliaName":"especialidad"},"tapas":{"isTag":"0","forFaceting":"1","algoliaName":"tapas"}}},"opiniones-cordoba":{"indexFeaturedImage":"1","index":"1","taxonomies":{"tipos":{"isTag":"0","forFaceting":"1","algoliaName":"tipos"},"clasificacion":{"isTag":"0","forFaceting":"1","algoliaName":"clasificacion"},"localidad":{"isTag":"0","forFaceting":"1","algoliaName":"localidad"},"especialidad":{"isTag":"0","forFaceting":"1","algoliaName":"especialidad"},"tapas":{"isTag":"0","forFaceting":"1","algoliaName":"tapas"}}},"bares-y-restaurantes":{"indexFeaturedImage":"1","index":"1","taxonomies":{"tipos":{"isTag":"0","forFaceting":"1","algoliaName":"tipos"},"clasificacion":{"isTag":"0","forFaceting":"1","algoliaName":"clasificacion"},"imprescindibles-para":{"isTag":"0","forFaceting":"1","algoliaName":"imprescindibles-para"},"tipo-de-cocina":{"isTag":"0","forFaceting":"1","algoliaName":"tipo-de-cocina"},"localidad":{"isTag":"1","forFaceting":"1","algoliaName":"localidad"},"especialidad":{"isTag":"0","forFaceting":"1","algoliaName":"especialidad"},"tapas":{"isTag":"0","forFaceting":"1","algoliaName":"tapas"}}},"bar-restaurante-cord":{"indexFeaturedImage":"1","index":"1","taxonomies":{"tipos":{"isTag":"0","forFaceting":"1","algoliaName":"tipos"},"clasificacion":{"isTag":"0","forFaceting":"1","algoliaName":"clasificacion"},"localidad":{"isTag":"0","forFaceting":"1","algoliaName":"localidad"},"especialidad":{"isTag":"0","forFaceting":"1","algoliaName":"especialidad"},"tapas":{"isTag":"0","forFaceting":"1","algoliaName":"tapas"}}},"especialista":{"indexFeaturedImage":"1","index":"1","taxonomies":{"articulos":{"isTag":"0","forFaceting":"1","algoliaName":"articulos"},"localidad":{"isTag":"0","forFaceting":"1","algoliaName":"localidad"}}},"especialista-cordoba":{"indexFeaturedImage":"1","index":"1","taxonomies":{"articulos":{"isTag":"0","forFaceting":"1","algoliaName":"articulos"},"localidad":{"isTag":"0","forFaceting":"1","algoliaName":"localidad"}}},"guia":{"indexFeaturedImage":"1","index":"0"}},"showThumbInPopup":"","popupThumbnailArgs":[],"defaultThumbSrc":"","taxonomiesToIndex":{"category":{"indexName":"Gurme_WP-Taxonomies_pr"},"post_tag":{"indexName":"Gurme_WP-Taxonomies_pr"},"localidad":{"indexName":"Gurme_WP-Taxonomies_pr"},"base-plato":{"indexName":"Gurme_WP-Taxonomies_pr"},"estacionalidad":{"indexName":"Gurme_WP-Taxonomies_pr"},"calorias":{"indexName":"Gurme_WP-Taxonomies_pr"},"tipo-plato":{"indexName":"Gurme_WP-Taxonomies_pr"},"precio":{"indexName":"Gurme_WP-Taxonomies_pr"},"tipo-cocina":{"indexName":"Gurme_WP-Taxonomies_pr"},"dificultad":{"indexName":"Gurme_WP-Taxonomies_pr"},"tiempo":{"indexName":"Gurme_WP-Taxonomies_pr"},"dieta":{"indexName":"Gurme_WP-Taxonomies_pr"},"tecnicas-cocina":{"indexName":"Gurme_WP-Taxonomies_pr"},"clasificaciones":{"indexName":"Gurme_WP-Taxonomies_pr"},"articulos":{"indexName":"Gurme_WP-Taxonomies_pr"},"recomendadas":{"indexName":"Gurme_WP-Taxonomies_pr"},"tipos":{"indexName":"Gurme_WP-Taxonomies_pr"},"clasificacion":{"indexName":"Gurme_WP-Taxonomies_pr"},"especialidad":{"indexName":"Gurme_WP-Taxonomies_pr"},"tapas":{"indexName":"Gurme_WP-Taxonomies_pr"}},"labels":{"taxonomies":{"category":"Categor\u00edas","post_tag":"Etiquetas","localidad":"Localidades","base-plato":"Base del Plato","estacionalidad":"Estacionalidad","calorias":"Calorias","tipo-plato":"Tipos de Plato","precio":"Precios","tipo-cocina":"Tipos de Cocina","dificultad":"Dificultad","tiempo":"Tiempo","dieta":"Dieta","tecnicas-cocina":"T\u00e9cnicas de Cocina","clasificaciones":"Clasificaciones","articulos":"Art\u00edculos","recomendadas":"Recomendadas","tipos":"Tipos","clasificacion":"Clasificaci\u00f3n","especialidad":"Especialidades","tapas":"Tapas"},"posts":"Posts"}};
+/* ]]> */
+</script>
+<script type='text/javascript' src='maven-algolia/lib/algoliasearch.min.js'></script>
+<script type='text/javascript' data-cfasync="false" id="omapi-script" src='https://a.optnmnstr.com/app/js/api.min.js?ver=1.1.5.7'></script>
+<link rel="amphtml" href="amp/index.html" /><link rel='https://api.w.org/' href='https://#/gurme/wp-json//' />
+
+<link rel="alternate" type="application/json+oembed" href="https://#/gurme/wp-json//oembed/1.0/embed?url=https%3A%2F%2F#%2Fgurme%2Flas-mejores-recetas%2Fcome-sano-con-estas-10-recetas-saludables-con-verduras%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://#/gurme/wp-json//oembed/1.0/embed?url=https%3A%2F%2F#%2Fgurme%2Flas-mejores-recetas%2Fcome-sano-con-estas-10-recetas-saludables-con-verduras%2F&#038;format=xml" />
+			<script type="application/ld+json">
+			{
+			  "@context": "http://schema.org",
+			  "@type": "ItemList",
+			  "url": "https://#/gurme/las-mejores-recetas/come-sano-con-estas-10-recetas-saludables-con-verduras/",
+			  "numberOfItems": "20",
+			  "itemListElement": [
+			  					{
+					  "@type": "Recipe",
+					  "position": 1,
+					  "image": "https://#/gurme/wp-content/uploads/sites/24/2015/08/corona-de-arroz-con-verduras-y-hortalizas.jpg",
+					  "url": "http://#/tusrecetas/recetas/andalucia/corona-de-arroz-con-verduras-y-hortalizas.html",
+					  "description": "Una receta sencilla de arroz puede convertirse en un plato muy especial con la presentación que os proponemos hoy. Prueba esta <strong>corona de arroz con verduras y hortalizas</strong> y te sorprenderás.",
+					  "name": "Corona de arroz con verduras y hortalizas"
+					}
+			  ,					{
+					  "@type": "Recipe",
+					  "position": 2,
+					  "image": "https://#/gurme/wp-content/uploads/sites/24/2015/07/salteado-de-verduras-con-rape.jpg",
+					  "url": "http://#/tusrecetas/recetas/andalucia/salteado-de-verduras-con-rape.html",
+					  "description": "Un plato sano y fácil de preparar es lo que os proponemos con esta receta. Disfruta de esta <strong>mezcla de pescado y verduras</strong> tan sabrosa gracias al salteado.",
+					  "name": "Salteado de verduras con rape"
+					}
+			  ,					{
+					  "@type": "Recipe",
+					  "position": 3,
+					  "image": "https://#/gurme/wp-content/uploads/sites/24/2011/02/solomillo-de-cerdo-iberico-con-salteado-de-verduras.jpg",
+					  "url": "http://#/tusrecetas/recetas/andalucia/solomillo-de-cerdo-iberico-con-salteado-de-verduras.html",
+					  "description": "El <strong>solomillo de cerdo</strong>, debido a su suave sabor y textura es una de las carnes más valoradas por los restaurantes y familias españolas. Hoy lo acompañamos con un <strong>salteado de verduras</strong>, por lo que nos vamos a encontrar ante un plato muy saludable y completo.",
+					  "name": "Solomillo de cerdo ibérico con salteado de verduras"
+					}
+			  ,					{
+					  "@type": "Recipe",
+					  "position": 4,
+					  "image": "https://#/gurme/wp-content/uploads/sites/24/2013/05/budin-de-verduras.jpg",
+					  "url": "http://#/tusrecetas/recetas/andalucia/budin-de-verduras.html",
+					  "description": "Esta receta de <strong>budín de verduras</strong> es muy versátil, puesto que podemos prepararla con las verduras que más nos gusten. Además, este budín se puede tomar tanto frío como caliente, por lo que podremos prepararlo en cualquier época del año.",
+					  "name": "Budín de verduras"
+					}
+			  ,					{
+					  "@type": "Recipe",
+					  "position": 5,
+					  "image": "https://#/gurme/wp-content/uploads/sites/24/2015/04/lentejas-al-curry-con-verduras.jpg",
+					  "url": "http://#/tusrecetas/recetas/andalucia/lentejas-al-curry-con-verduras.html",
+					  "description": "En esta ocasión nos vamos a olvidar de las <strong>recetas de lentejas</strong> más tradicionales para presentar un plato más ligero y con un toque especial de curry.",
+					  "name": "Lentejas al curry con verduras"
+					}
+			  ,					{
+					  "@type": "Recipe",
+					  "position": 6,
+					  "image": "https://#/gurme/wp-content/uploads/sites/24/2015/01/menestra-de-verduras-y-jamon.jpg",
+					  "url": "http://#/tusrecetas/recetas/andalucia/menestra-de-verduras-y-jamon.html",
+					  "description": "La <strong>menestra</strong> es una de las formas más exquisita de tomar verduras. Es un plato que además puedes adaptar al gusto de los comensales.",
+					  "name": "Menestra de verduras y jamón"
+					}
+			  ,					{
+					  "@type": "Recipe",
+					  "position": 7,
+					  "image": "https://#/gurme/wp-content/uploads/sites/24/2014/06/tagliattele-verduras-1200x675.jpg",
+					  "url": "http://#/tusrecetas/recetas/andalucia/tagliatelles-con-verduras.html",
+					  "description": "Hoy os proponemos un rico <strong>plato de pasta acompañada con unas sanas verduras</strong>. Ideal para los que quieren comer bien y no poner peso.",
+					  "name": "Tagliatelles con verduras"
+					}
+			  ,					{
+					  "@type": "Recipe",
+					  "position": 8,
+					  "image": "https://#/gurme/wp-content/uploads/sites/24/2013/01/capas-verduras-asadas-1200x675.jpg",
+					  "url": "http://#/tusrecetas/recetas/andalucia/capas-de-verduras-asadas.html",
+					  "description": "Hoy proponemos un<strong> plato de verduras asadas</strong> que, al cocinarlas de esta manera, conseguimos que tomen un sabor diferente y muy apetitoso.",
+					  "name": "Capas de verduras asadas"
+					}
+			  ,					{
+					  "@type": "Recipe",
+					  "position": 9,
+					  "image": "https://#/gurme/wp-content/uploads/sites/24/2014/06/verduras-romesco-1200x675.jpg",
+					  "url": "http://#/tusrecetas/recetas/andalucia/aperitivo-de-verduras-con-salsa-romesco.html",
+					  "description": "La <strong>salsa romesco</strong> combina muy bien tanto con carnes como con verduras. En este caso hemos optado por la segunda opción para preparar unos aperitivos muy vistosos.",
+					  "name": "Aperitivo de verduras con salsa romesco"
+					}
+			  ,					{
+					  "@type": "Recipe",
+					  "position": 10,
+					  "image": "https://#/gurme/wp-content/uploads/sites/24/2015/11/sopa-de-verduras-y-legumbres-a-la-italiana-1200x798.jpg",
+					  "url": "http://#/tusrecetas/recetas/andalucia/sopa-de-verduras-y-legumbres-a-la-italiana.html",
+					  "description": "Esta <strong>sopa de verduras y legumbres</strong> típica de la cocina italiana se conoce como sopa minestrone. Se puede elaborar con diferentes verduras y legumbres y también es típico añadirle unos fideos o un poco de arroz. Aquí te dejamos una sencilla receta para que puedas prepararla.",
+					  "name": "Sopa de verduras y legumbres a la italiana"
+					}
+			  ,					{
+					  "@type": "Recipe",
+					  "position": 11,
+					  "image": "https://#/gurme/wp-content/uploads/sites/24/2011/03/2741_verduraspolenta_1301563595.jpg",
+					  "url": "http://#/gurme/recetas/verduras-salteadas-sobre-tosta-de-polenta/",
+					  "description": "Continuamos nuestro recetario con una original <strong>tosta de polenta con verduras salteadas</strong>, un plato que supone una forma diferente y nutritiva de presentar las verduras.",
+					  "name": "Verduras salteadas sobre tosta de polenta"
+					}
+			  ,					{
+					  "@type": "Recipe",
+					  "position": 12,
+					  "image": "https://#/gurme/wp-content/uploads/sites/24/2015/10/verduras-salteadas-con-queso-y-sesamo-1200x798.jpg",
+					  "url": "http://#/gurme/recetas/verduras-salteadas-con-queso-y-sesamo/",
+					  "description": "Esta sencilla <strong>receta de verduras salteadas con queso y sésamo</strong> os puede sacar de más de un apuro, a la vez que os ayudará a preparar una comida ligera y nutritiva.",
+					  "name": "Verduras salteadas con queso y sésamo"
+					}
+			  ,					{
+					  "@type": "Recipe",
+					  "position": 13,
+					  "image": "https://#/gurme/wp-content/uploads/sites/24/2011/08/panache-de-verduras-salteadas.jpg",
+					  "url": "http://#/gurme/recetas/panache-de-verduras-salteadas/",
+					  "description": "Aunque la tradicional <strong>panaché de verduras</strong> se hace al vapor, en esta ocasión vamos a dar a las verduras un poco más de sabor salteándolas.",
+					  "name": "Panaché de verduras salteadas"
+					}
+			  ,					{
+					  "@type": "Recipe",
+					  "position": 14,
+					  "image": "https://#/gurme/wp-content/uploads/sites/24/2010/03/1278_salteadosetasverdurashuevoescalfado_1269076327.jpg",
+					  "url": "http://#/gurme/recetas/salteado-de-verduras-con-huevo-escalfado/",
+					  "description": "Los <strong>salteados de verduras</strong> son siempre una elección muy acertada y saludable, que nos va a aportar infinidad de vitaminas, fibra y minerales. Además, son <strong>platos muy rápidos y sencillos</strong> de preparar.",
+					  "name": "Salteado de verduras con huevo escalfado"
+					}
+			  ,					{
+					  "@type": "Recipe",
+					  "position": 15,
+					  "image": "https://#/gurme/wp-content/uploads/sites/24/2009/07/424_verdurashornointerior_1248460946.jpg",
+					  "url": "http://#/gurme/recetas/verduras-al-horno-con-jamon-serrano-y-queso-gratinado/",
+					  "description": "Una r<strong>eceta de verduras al horno con jamón y queso gratinado</strong>, que les da un gran sabor. Sabrosa y muy nutritiva, supone una interesante alternativa para <strong>comer verduras</strong>.",
+					  "name": "Verduras al horno con jamón serrano y queso gratinado"
+					}
+			  ,					{
+					  "@type": "Recipe",
+					  "position": 16,
+					  "image": "https://#/gurme/wp-content/uploads/sites/24/2013/01/verduras-asadas-con-queso-de-cabra-crujiente.jpg",
+					  "url": "http://#/gurme/recetas/verduras-asadas-con-queso-de-cabra-crujiente/",
+					  "description": "Las verduras siempre son ideales cuando queremos hacer una comida sana. Por ello, las <strong>verduras asadas al horno</strong> son fáciles de preparar y saludables. Hoy las acompañamos con un poco de queso.",
+					  "name": "Verduras asadas con queso de cabra crujiente"
+					}
+			  ,					{
+					  "@type": "Recipe",
+					  "position": 17,
+					  "image": "https://#/gurme/wp-content/uploads/sites/24/2009/07/581_verdurashornointerior_1249643048.jpg",
+					  "url": "http://#/gurme/recetas/verduras-asadas-al-horno/",
+					  "description": "Para realizar esta <strong>receta de verduras</strong>, solo tienes que cortar las berenjenas y los calabacines en rodajas finas, espolvorear con sal gruesa y dejar reposar durante 15 minutos para que suelten el agua. Transcurrido ese tiempo, secaremos bien, y ¡directas al horno! Un plato saludable y riquísimo.",
+					  "name": "Verduras asadas al horno"
+					}
+			  ,					{
+					  "@type": "Recipe",
+					  "position": 18,
+					  "image": "https://#/gurme/wp-content/uploads/sites/24/2011/10/verduras-con-arroz-al-horno-y-morcilla.jpg",
+					  "url": "http://#/gurme/recetas/verduras-con-arroz-al-horno-y-morcilla/",
+					  "description": "El <strong>arroz</strong> es uno de los alimentos más versátiles de todo el recetario. Así, hoy lo unimos a las verduras para crear una receta de lo más completa.",
+					  "name": "Verduras con arroz al horno y morcilla"
+					}
+			  ,					{
+					  "@type": "Recipe",
+					  "position": 19,
+					  "image": "https://#/gurme/wp-content/uploads/sites/24/2015/03/capas-de-verduras-asadas-1.jpg",
+					  "url": "http://#/gurme/recetas/capas-de-verduras-asadas/",
+					  "description": "Hoy proponemos un <strong>plato de verduras asadas</strong> que, al cocinarlas de esta manera, conseguimos que tomen un sabor diferente y muy apetitoso.",
+					  "name": "Capas de verduras asadas"
+					}
+			  ,					{
+					  "@type": "Recipe",
+					  "position": 20,
+					  "image": "https://#/gurme/wp-content/uploads/sites/24/2010/08/1917_verdurasparrilla_1282476639.jpg",
+					  "url": "http://#/gurme/recetas/verduras-a-la-parrilla-con-mousse-de-pato/",
+					  "description": "Esta <strong>parrillada</strong>, además de ser muy sencilla de elaborar y de estar deliciosa, es una receta muy nutritiva, pues nos va a aportar multitud de vitaminas, minerales, fibra y sustancias de acción antioxidante.",
+					  "name": "Verduras a la parrilla con mousse de pato"
+					}
+			  			  ]
+			}
+			</script>
+			
+					<script type="application/ld+json">
+	{
+		"@context": "http://schema.org",
+		"@type": "Recipe",
+		"mainEntityOfPage": {
+			"@type": "WebPage",
+			"@id": "https://#/gurme/las-mejores-recetas/come-sano-con-estas-10-recetas-saludables-con-verduras/"
+		},
+		"image" : "https://#/gurme/wp-content/uploads/sites/24/2014/06/receta-salteado-verduras-1.jpg",
+		"datePublished": "2020-04-03T07:00:41+00:00",
+		"dateModified": "2020-05-27T08:28:59+00:00",
+		"publisher": {
+			"@type": "Organization",
+			"name": "ABC de Sevilla",
+			"url": "http://#/",
+			"logo": {
+				"@type": "ImageObject",
+				"url": "https://#/gurme//wp-content/uploads/2016/03/GURME_sevilla_logo.png",
+				"height": 60,
+				"width": 402
+			}
+		},
+		"name": "20 recetas con verduras para comer sano",
+		"description": ""
+	}
+	</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAkYNW_OqK5DW1wTb3KrIyvLDoZkLNwzcs"></script>
+
+    
+
+    
+		<style type="text/css">
+			[data-sticky_parent] [data-sticky_column].fixed_top {
+				position: relative;
+				top: 0;
+				bottom: auto;
+			}
+			[data-sticky_parent] [data-sticky_column].fixed_bottom {
+				position: relative;
+				top: auto;
+				bottom: auto;
+				margin-top: 0;
+			}
+			[data-sticky_parent] [data-sticky_column].fix_scroll {
+				position: fixed;
+				top: 45px;
+				bottom: auto;
+			}
+		</style>
+
+						
+				
+				
+		            <!--
+            <script type="text/javascript">
+            var appoInit=document.createElement('script');
+            var appoS=document.getElementsByTagName('script')[0];
+            appoInit.type='text/javascript';
+            appoInit.src='https://www.appocalypsis.com/loader/init/c8FFFP.js';
+            appoInit.async=true;
+            appoS.parentNode.insertBefore(appoInit, appoS);
+            </script>
+            -->
+	</head>
+
+		<body class="las-mejores-recetas-template-default single single-las-mejores-recetas postid-126205 full-width front-page custom-background-white tema_escritorio">
+
+        <!-- init trackingBody -->  <!-- block noscripttracking -->
+            <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NV52QC" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><noscript><p><img src="https://sb.scorecardresearch.com/p?c1=2&c2=7715761&cv=2.0&cj=1&ns_site=abcdesevilla-es&voc_site=abcdesevilla-es&amp;voc_se=&amp;voc_s1=&amp;voc_s2=&amp;voc_s3=&amp;voc_s4=&amp;voc_tn=&amp;voc_ho=&amp;voc_tc=&amp;voc_tcnew=&amp;voc_ed=&amp;voc_au=&amp;voc_fep=&amp;voc_fem=&amp;voc_or=&amp;voc_pr=&amp;voc_pl=&amp;voc_pu=&amp;voc_usrid=&amp;voc_tusr=&amp;voc_ate=&amp;voc_usrag=&amp;voc_usrcp=&amp;voc_usrgen=&amp;" /></p></noscript><div id="estadisticas" style="display:none"></div><div id="fb-root"></div><noscript><img src="https://sadbmetrics.abc.es/b/ss/vocabcdesevilla,voces/1/G.4--NS/1111112?pageName=&amp;g=/js-noactive&amp;v55=abcdesevilla&amp;c56=abcdesevilla" width="1" height="1" border="0" /></noscript><noscript><img src="https://rrss.abc.es/pixel/png/ABCES" style="position: fixed;left: -10000px"/></noscript>
+        <!-- endblock noscripttracking -->
+<!-- end trackingBody -->
+        				
+				<div class="off-canvas-wrap" data-offcanvas>
+  <div class="inner-wrap">
+
+	<div id="top" data-magellan-expedition="fixed">
+
+				<nav class="tab-bar show-for-small-only">
+
+		   			<section class="left-small">
+				<a class="left-off-canvas-toggle menu-icon" href="index.html#"><span></span></a>
+			</section>
+      <section class="logo-off-canvas">
+          			<p class="h1 logo header-gurme">	
+					
+					<div class="small-3 medium-3 large-3 columns">&nbsp;</div><div class="small-6 medium-6 large-6 columns">													<a href="https://#/gurme/" title="Gurmé" rel="home">
+																
+									<img alt="Gurmé" src="wp-forge/library-abc/images/logos/logo-gurme-general.png" />
+
+														</a>
+												</div><div class="small-3 medium-3 large-3 columns">&nbsp;</div>							
+				</p>	
+				      </section>
+		</nav>
+	</div><!-- /top -->
+
+     <aside class="left-off-canvas-menu">
+			
+			             <ul class="off-canvas-list"><li class="divider"></li><li id="menu-item-305620" class="menu-item menu-item-main-menu menu-item-bares-y-restaurantes"><a  href="https://#/gurme/bares-y-restaurantes/">Bares y restaurantes</a></li>
+<li class="divider"></li><li id="menu-item-304069" class="menu-item menu-item-main-menu menu-item-opiniones"><a  href="https://#/gurme/opiniones-bares-y-restaurantes/">Opiniones</a></li>
+<li class="divider"></li><li id="menu-item-304070" class="menu-item menu-item-main-menu menu-item-reportajes"><a  href="https://#/gurme/reportajes-bares-y-restaurantes/">Reportajes</a></li>
+<li class="divider"></li><li id="menu-item-309895" class="menu-item menu-item-main-menu menu-item-actualidad"><a  href="https://#/gurme/actualidad/">Actualidad</a></li>
+<li class="divider"></li><li id="menu-item-332935" class="menu-item menu-item-main-menu menu-item-quienes-somos"><a  href="https://#/gurme/quienes-somos/">Quiénes somos</a></li>
+<li class="divider"></li><li id="menu-item-338448" class="menu-item menu-item-main-menu menu-item-premios-gurme"><a  href="https://premiosgurme.es/">Premios Gurmé</a></li>
+<li class="divider"></li><li id="menu-item-111593" class="recetas menu-item menu-item-main-menu menu-item-recetas-de-cocina"><a  href="https://#/gurme/recetas-de-cocina/">Recetas de Cocina</a></li>
+</ul>
+										<ul class="social-profiles" role="navigation">
+										<li>
+						<a href="https://www.facebook.com/GurmeSevilla/" title="Facebook">
+							<i class="fa fa-facebook"></i>
+						</a>
+					</li>
+					
+										<li>
+						<a href="https://twitter.com/GURMESevilla" title="Twitter">
+							<i class="fa fa-twitter"></i>
+						</a>
+					</li>
+					
+										<li>
+						<a href="https://www.instagram.com/gurmesevilla/" title="Cuenta de instagram de gurmé Sevilla">
+							<i class="fa fa-instagram"></i>
+						</a>
+					</li>
+									</ul>
+			     </aside>
+
+
+<!--        Movido al footer por carga de jQuery en Voonto -->
+
+<!--		<script type="text/javascript">-->
+<!--			jQuery(".icon_buscador").click(function(){-->
+<!--				if (jQuery( "div[data-magellan-expedition=fixed] #searchformtop" ).hasClass( "hide" )){-->
+<!--					jQuery( "div[data-magellan-expedition=fixed] #searchformtop" ).removeClass( "hide" );-->
+<!--				} else{-->
+<!--					jQuery( "div[data-magellan-expedition=fixed] #searchformtop" ).addClass( "hide" );-->
+<!--				}-->
+<!--			});-->
+<!--		</script>-->
+
+		<div class="content_container">
+
+        <main>
+
+		<section class="content_wrap" role="document">
+			
+				
+<div class="nav_container abc-top-nav">
+
+    <div class="row">
+        
+        <nav class="top-bar-abc" data-topbar data-options="scrolltop:false; mobile_show_parent_link: true">
+        	
+										<span class="abc-logo">
+											<a href="https://#/" title="Logo abcdesevilla">
+												<img alt="Logo abcdesevilla" src="2015/10/logo-abcdesevilla.png" />
+											</a>
+									</span>
+						
+            <section class="top-bar-section">
+				                <ul><li class="divider"></li><li id="menu-item-10848" class="menu-item menu-item-main-menu menu-item-al-final-de-la-palmera"><a  href="https://#/alfinaldelapalmera/">Al Final de la Palmera</a></li>
+<li class="divider"></li><li id="menu-item-298068" class="menu-item menu-item-main-menu menu-item-orgullo-de-nervion"><a  href="https://#/orgullodenervion/">Orgullo de Nervión</a></li>
+<li class="divider"></li><li id="menu-item-10850" class="menu-item menu-item-main-menu menu-item-pasion-en-sevilla"><a  href="https://#/pasionensevilla/">Pasión en Sevilla</a></li>
+<li class="divider"></li><li id="menu-item-10853" class="menu-item menu-item-main-menu menu-item-bulevar-sur"><a  href="https://#/estilo/bulevarsur">Bulevar Sur</a></li>
+<li class="divider"></li><li id="menu-item-10849" class="menu-item menu-item-main-menu menu-item-mobility"><a  href="https://#/mobility/">Mobility</a></li>
+<li class="divider"></li><li id="menu-item-10852" class="menu-item menu-item-main-menu menu-item-sevilla-solidaria"><a  href="http://sevillasolidaria.#/">Sevilla Solidaria</a></li>
+</ul>            </section>
+		</nav>
+	</div><!-- .row -->
+</div><!-- end  nav_container -->
+				
+        <header id="header" class="row" role="banner">
+			        	<div class="site-header">
+		<aside id="execphp-4" class="widget  widget_execphp">			<div class="execphpwidget"><script src="https://code.jquery.com/jquery-1.11.2.min.js" type="text/javascript"></script>
+</div>
+		</aside><aside id="text-18" class="widget  widget_text">			<div class="textwidget"><center>
+<div data-voc-vam data-voc-vam-position="megabanner"></div>
+</center>
+</div>
+		</aside><aside id="text-61" class="widget  widget_text">			<div class="textwidget"><style>
+aside#navigation ul.left {
+position: absolute;
+left: 2 rem;
+}
+.entry-wrapper-localidades {
+    margin-bottom: 1.5rem;
+}
+
+</style></div>
+		</aside><aside id="text-49" class="widget  widget_text">			<div class="textwidget"><style>
+		#cover.primary.sin_el_cover {
+    margin-bottom:1.875rem;
+    background-color:#fff
+}
+#cover.primary.sin_el_cover .entry-type-label {
+    margin-top:1.875rem
+}
+#cover.primary.sin_el_cover img {
+    display:none
+}
+#cover.primary.sin_el_cover .archive-header {
+    min-height:20.125rem;
+    background-color:#fff
+}
+#cover.primary.sin_el_cover .archive-header .cover-title {
+    font-size:4rem;
+    text-shadow:none;
+    text-align:center;
+    line-height:1.26;
+    color:#373542
+}
+#cover.primary.sin_el_cover .archive-header .firma {
+    text-shadow:none;
+    color:#373542;
+    border-bottom:1px solid #e8e8e8;
+    padding-bottom:1.875rem
+}
+#cover.primary .archive-header {
+    min-height:29.6875rem
+}
+		</style></div>
+		</aside><aside id="custom_html-2" class="widget_text widget  widget_custom_html"><div class="textwidget custom-html-widget"><style>
+	.thumbnails-a .trc_rbox_header {
+    padding: 15px 0px 6px 0px;
+    border-width: 5px 0 0 0;
+    border-style: solid;
+}
+		.thumbnails-b .trc_rbox_header {
+    padding: 15px 0px 6px 0px;
+    border-width: 5px 0 0 0;
+    border-style: solid;
+}
+</style></div></aside><aside id="execphp-8" class="widget  widget_execphp">			<div class="execphpwidget"><style>
+.cover_patrocinio {
+ position: absolute;
+ width: 100%;
+ height: 100%;
+ top: 0;
+ left: 0;
+z-index: -1;
+}
+#buscador-widget img,
+#cover .archive-header img,
+#cover .archive-header .cover_patrocinio img {
+ min-height: 100%;
+ max-width: 100%;
+ width: 100%;
+ height: 100%;
+ position: absolute;
+ top: 0;
+ left: 0;
+ object-fit: cover;
+ object-position: center;
+}
+</style></div>
+		</aside>
+	<header class="clearfix text-center">
+		
+		    <div class="show-for-medium-up">
+      			<p class="h1 logo header-gurme">	
+					
+					<div class="small-3 medium-3 large-3 columns">&nbsp;</div><div class="small-6 medium-6 large-6 columns">													<a href="https://#/gurme/" title="Gurmé" rel="home">
+																
+									<img alt="Gurmé" src="wp-forge/library-abc/images/logos/logo-gurme-general.png" />
+
+														</a>
+												</div><div class="small-3 medium-3 large-3 columns">&nbsp;</div>							
+				</p>	
+				    </div>
+	</header>
+
+</div><!-- .site-header -->
+        </header>
+
+        				<div class="show-for-medium-up">
+					
+<aside id="navigation" class="sticky">
+	
+		
+	<form role="search" method="GET" id="searchformtop" action="index.html#" class="searchform hide">
+		<div class="row">
+			<div class="small-12 medium-12 large-12 columns">				
+				<div class="row collapse">
+					<div class="small-10 columns">
+						<input type="text" class="searchtext dream-search" autocomplete="off" spellcheck="false" autocorrect="false" 
+							value="" name="q" id="q" 
+						title="¿Qué te apetece hoy?" placeholder="¿Qué te apetece hoy?" />
+					</div>						
+					<div class="small-2 columns">
+						<a id="searchbutton" role="button" class="button postfix searchbutton" href="javascript:void(0);" 
+							onclick="document.getElementById('searchformtop').submit();" title="Buscar">
+							<i class="fa fa-search"></i>
+						</a>
+					</div>
+				</div>					
+			</div>
+		</div>
+	</form>
+		
+    <nav class="top-bar row" data-topbar data-options="scrolltop:false; mobile_show_parent_link: true">
+
+        <section class="top-bar-section">
+														<ul class="off-canvas-list">
+			<li class=" menu-item menu-item-main-menu icon-item-menu ">
+				<a href="https://#/gurme/" title="Gurmé" rel="home">
+					<img src="wp-forge/library-abc/images/gurme-menu-inicio.png" />
+				</a>
+			</li>
+		</ul>
+					
+            <ul class="left"><li class="divider"></li><li id="menu-item-305620" class="menu-item menu-item-main-menu menu-item-bares-y-restaurantes"><a  href="https://#/gurme/bares-y-restaurantes/">Bares y restaurantes</a></li>
+<li class="divider"></li><li id="menu-item-304069" class="menu-item menu-item-main-menu menu-item-opiniones"><a  href="https://#/gurme/opiniones-bares-y-restaurantes/">Opiniones</a></li>
+<li class="divider"></li><li id="menu-item-304070" class="menu-item menu-item-main-menu menu-item-reportajes"><a  href="https://#/gurme/reportajes-bares-y-restaurantes/">Reportajes</a></li>
+<li class="divider"></li><li id="menu-item-309895" class="menu-item menu-item-main-menu menu-item-actualidad"><a  href="https://#/gurme/actualidad/">Actualidad</a></li>
+<li class="divider"></li><li id="menu-item-332935" class="menu-item menu-item-main-menu menu-item-quienes-somos"><a  href="https://#/gurme/quienes-somos/">Quiénes somos</a></li>
+<li class="divider"></li><li id="menu-item-338448" class="menu-item menu-item-main-menu menu-item-premios-gurme"><a  href="https://premiosgurme.es/">Premios Gurmé</a></li>
+<li class="divider"></li><li id="menu-item-111593" class="recetas menu-item menu-item-main-menu menu-item-recetas-de-cocina"><a  href="https://#/gurme/recetas-de-cocina/">Recetas de Cocina</a></li>
+</ul>		
+						
+			<ul class="right social-profiles" role="navigation">
+				<li>
+					<a id='cambia_version' onclick='toMB(this);' href='javascript:void(0);' title='Ir a la version móvil' alt='Ir a la version móvil' data='/las-mejores-recetas/come-sano-con-estas-10-recetas-saludables-con-verduras/' class=''><i class='fa fa-mobile fa-2x'></i></a>				</li>
+			</ul>
+		
+						
+		</section>
+	</nav>
+
+</aside><!-- end #navigation -->
+
+
+<div class="breadcrumbs"><div class="row"><span><span><a href="https://#/gurme/" >Gurmé</a> <i class="fa fa-chevron-right"></i> <span><a href="https://#/gurme/las-mejores-recetas/" >Las Mejores Recetas</a> <i class="fa fa-chevron-right"></i> <strong class="breadcrumb_last">20 recetas con verduras para comer sano</strong></span></span></span></div></div>
+				</div>
+
+		
+		<div id="columna-abc-1" class="widget-area">
+
+			<div class="row">
+							</div>
+
+		</div>
+
+        <section id="wrap" role="document">
+
+						
+            
+	<section id="content" role="main">
+	
+		
+    	    	
+				<div id="cover" class="primary">
+			
+			<article>
+				
+				
+<style>
+
+aside#main {
+    float: left;
+    margin-top: 34px;
+    margin-left: 40px;
+    color: red;
+    background: white;
+}
+#myModal .panel.clearfix {
+    background-color: white !important;
+    border: 0px !important;
+	margin-bottom: 0px;
+	margin-top: -30px;
+}
+#main nav.top-bar.row {
+    background-color: white;
+}
+
+</style>
+<header class="archive-header">
+
+	<div class="archive-meta-header">
+
+		<div class="row">
+			
+						<div class="entry-type-label">
+				<a href="https://#/gurme/las-mejores-recetas/" title="Las Mejores Recetas">Las Mejores Recetas</a>			</div>
+
+						<h1 class="cover-title">20 recetas con verduras para comer sano</h1>
+
+							
+
+						
+
+									
+			
+			</ul>
+
+		</div>
+		
+		
+	<img data-interchange="[https://#/gurme/wp-content/uploads/sites/24/2014/06/receta-salteado-verduras-1-1200x675.jpg, (small)], 
+			[https://#/gurme/wp-content/uploads/sites/24/2014/06/receta-salteado-verduras-1-1440x810.jpg, (medium)], 
+			[https://#/gurme/wp-content/uploads/sites/24/2014/06/receta-salteado-verduras-1.jpg, (large)]" 
+			data-uuid="interchange-imgftusrecetas" src="sites/24/2014/06/receta-salteado-verduras-1.jpg">	
+	</div><!-- /.archive-meta-header -->
+
+</header><!-- /.archive-header -->
+			
+			</article>
+		
+		</div>
+
+		<article id="post-126205" class="main" class="post-126205 las-mejores-recetas type-las-mejores-recetas status-publish has-post-thumbnail hentry base-plato-verdurasylegumbres estacionalidad-todo-el-anio clasificaciones-saludable">
+
+			<div class="row">
+			
+				<div id="wdg-posts-entry" class="medium-8 large-8 columns">
+
+					<div class="entry-options">
+					
+						<div class="clearfix">
+							
+							<div class="left">
+									<div class="iconos-compartir">
+		<ul>
+			<li class="twitter">
+								<a rel="nofollow" title="Publicarlo en Twitter" class="item icono-compartir twitter" 
+					onClick="javascript:window.open('https://twitter.com/intent/tweet?url=https://#/gurme/las-mejores-recetas/come-sano-con-estas-10-recetas-saludables-con-verduras/&text=20 recetas con verduras para comer sano', 'TwitterWindow', 'width=800, height=600');" 
+					href="javascript:void(0)">
+						<i class="fa fa-twitter"></i>
+				</a>
+			</li>
+			<li class="facebook">
+								<a rel="nofollow" title="Publicar en Facebook" class="item icono-compartir facebook" 
+					onClick="javascript:window.open('https://www.facebook.com/sharer/sharer.php?u=https://#/gurme/las-mejores-recetas/come-sano-con-estas-10-recetas-saludables-con-verduras/', 'FacebookWindow', 'width=800, height=600');"
+					href="javascript:void(0)">
+						<i class="fa fa-facebook"></i>
+				</a>
+			</li>
+			
+									<li class="comments">
+				<a class="item icon-comment dsq-comment-count comment-link commentslink" data-disqus-identifier="" href="index.html#commentsDiv">
+					<i class="fa fa-comment"></i>
+				</a>
+			</li>
+					</ul>		
+	</div>							</div>
+							
+							<div class="right">
+																								
+																										
+																								
+																								
+							</div>
+						
+						</div>
+						
+					</div>
+				
+					<div class="entry-content">
+						
+												
+												<div class="wdg_posts_archivo">
+							
+				<div id="the-content">
+			<p><strong>¿Cómo podemos comer sano? </strong>Las <strong>recetas con verduras</strong> son siempre una elección muy acertada y sana. Se trata de productos que <strong>nos aportan gran cantidad de vitaminas, fibra y minerales</strong>, entre otros beneficios. De hecho, los expertos en nutrición aconsejan<strong> consumir a diario un mínimo de cinco raciones entre frutas y verduras</strong> para seguir una dieta saludable y equilibrada. Esta cantidad de verdura diaria recomendada nos obliga a contar con diferentes y variados recursos a la hora de cocinar para no caer en la monotonía y aprovechar al máximo sus posibilidades.</p>
+<h2>Pero, ¿qué propiedades exactamente nos proporcionan las verduras?</h2>
+<ul>
+<li>Los vegetales son <strong>ricos en potasio y ayudan a eliminar la retención de líquidos</strong>, propia de los alimentos ricos en sodio.</li>
+<li>También son alimentos que <strong>carecen de grasas y son pobres en calorías</strong>, por lo que ayudan a mantener el peso y combatir la obesidad.</li>
+<li>Las verduras son <strong>ricas en minerales</strong> como hierro, zinc, fósforo, potasio, calcio, magnesio o cobre, micronutrientes imprescindibles para el buen funcionamiento de nuestro organismo.</li>
+<li>El <strong>aporte vitamínico</strong> de los vegetales y hortalizas tiene efectos muy beneficiosos para el organismo.</li>
+</ul>
+<p>Hay que tener en cuenta que a la hora de cocinar platos con verduras, no solo contamos con el producto fresco, que nos obliga a visitar con frecuencia el mercado. Las verduras congeladas son también un recurso a tener en cuenta en la cocina. Estas nos permiten ahorrar a la vez que disfrutamos de los beneficios nutricionales de las verduras de temporada, que quedan preservados en el momento de la congelación. Espinacas, pimientos, cebollas, guisantes, brócoli, zanahoria, judías verdes, coliflor, alcachofa, maíz y muchas más. Podemos disponer de casi cualquier verdura en el momento que la necesitemos recurriendo a los congelados. De esta forma, podemos elaborar guisos sanos y muy recomendables en toda dieta sana.</p>
+<p>Por otra parte, aunque suelen tener fama de platos aburridos, podemos preparar recetas con verduras muy diferentes, variadas y sabrosas. Puedes probar con multitud de verduras, como con <a href="https://#/gurme/las-mejores-recetas/come-sano-y-rico-con-estas-10-recetas-de-judias-verdes/">recetas de judías verdes</a>, recetas de calabacín o de berenjena.</p>
+<h2>20 recetas con verduras para comer sano</h2>
+<p>Como demostración, aquí te dejamos una selección de <strong>20 recetas saludables con verduras</strong> para todos los gustos. Para que comer y cocinar verduras sea toda una experiencia con múltiples matices. ¡Buen provecho!</p>
+<p>Si aún la verdura te cuesta, te recomendamos estas 21<a href="https://#/gurme/las-mejores-recetas/21-recetas-pechuga-pollo/"> recetas con pechuga de pollo</a>, deliciosas y saludables para los más carnívoros pero que quieren cuidarse.</p>
+<aside id="text-75" class="widget publicidad_final_contenido widget_text">			<div class="textwidget"><div style="text-align: center;">
+<div data-voc-vam data-voc-vam-position="layer_inpage" data-voc-vam-outofpage="true" id="layer_inpage-id"></div>
+</div></div>
+		</aside>			
+											
+		</div>
+										
+							<article id="post-126205" class="post-126205 las-mejores-recetas type-las-mejores-recetas status-publish has-post-thumbnail hentry base-plato-verdurasylegumbres estacionalidad-todo-el-anio clasificaciones-saludable">
+								
+								<header class="entry-header">
+									
+																											
+																		 <a href="http://#/tusrecetas/recetas/andalucia/corona-de-arroz-con-verduras-y-hortalizas.html"> 										<img src="sites/24/2015/08/corona-de-arroz-con-verduras-y-hortalizas-960x540.jpg" alt="Corona de arroz con verduras y hortalizas: recetas con verduras" width="960" height="540" />
+									</a>	
+
+																		<h2 class="entry-title">
+										<a href="http://#/tusrecetas/recetas/andalucia/corona-de-arroz-con-verduras-y-hortalizas.html" title="Corona de arroz con verduras y hortalizas" rel="bookmark">											<span>Corona de arroz con verduras y hortalizas</span>
+										</a>	
+									</h2>
+									
+								</header><!-- .entry-header -->
+								
+																	<div class="entry-content">
+										<div class="entry-content-tags">
+										<a href="https://#/gurme/las-mejores-recetas/clasificacion/saludable/">Saludable</a>										</div>
+										<div class="entry-content-description">
+											<p>Una receta sencilla de arroz puede convertirse en un plato muy especial con la presentación que os proponemos hoy. Prueba esta <strong>corona de arroz con verduras y hortalizas</strong> y te sorprenderás.</p>
+										</div>
+									</div><!-- .entry-content -->
+																
+								<footer class="entry-meta">
+									<div class="entry-meta-footer">
+											<div class="iconos-compartir">
+		<ul>
+			<li class="twitter">
+								<a rel="nofollow" title="Publicarlo en Twitter" class="item icono-compartir twitter" 
+					onClick="javascript:window.open('https://twitter.com/intent/tweet?url=http://#/tusrecetas/recetas/andalucia/corona-de-arroz-con-verduras-y-hortalizas.html&text=Corona de arroz con verduras y hortalizas', 'TwitterWindow', 'width=800, height=600');" 
+					href="javascript:void(0)">
+						<i class="fa fa-twitter"></i>
+				</a>
+			</li>
+			<li class="facebook">
+								<a rel="nofollow" title="Publicar en Facebook" class="item icono-compartir facebook" 
+					onClick="javascript:window.open('https://www.facebook.com/sharer/sharer.php?u=http://#/tusrecetas/recetas/andalucia/corona-de-arroz-con-verduras-y-hortalizas.html', 'FacebookWindow', 'width=800, height=600');"
+					href="javascript:void(0)">
+						<i class="fa fa-facebook"></i>
+				</a>
+			</li>
+			
+									<li class="comments">
+				<a class="item icon-comment dsq-comment-count comment-link commentslink" data-disqus-identifier="" href="http://#/tusrecetas/recetas/andalucia/corona-de-arroz-con-verduras-y-hortalizas.html#commentsDiv">
+					<i class="fa fa-comment"></i>
+				</a>
+			</li>
+					</ul>		
+	</div>									</div><!-- end .entry-meta-footer -->
+										
+								</footer><!-- .entry-meta -->
+
+							</article><!-- #post -->
+											
+													
+							<article id="post-126205" class="post-126205 las-mejores-recetas type-las-mejores-recetas status-publish has-post-thumbnail hentry base-plato-verdurasylegumbres estacionalidad-todo-el-anio clasificaciones-saludable">
+								
+								<header class="entry-header">
+									
+																											
+																		 <a href="http://#/tusrecetas/recetas/andalucia/salteado-de-verduras-con-rape.html"> 										<img src="sites/24/2015/07/salteado-de-verduras-con-rape-960x540.jpg" alt="Salteado de verduras con rape: recetas con verduras" width="960" height="540" />
+									</a>	
+
+																		<h2 class="entry-title">
+										<a href="http://#/tusrecetas/recetas/andalucia/salteado-de-verduras-con-rape.html" title="Salteado de verduras con rape" rel="bookmark">											<span>Salteado de verduras con rape</span>
+										</a>	
+									</h2>
+									
+								</header><!-- .entry-header -->
+								
+																	<div class="entry-content">
+										<div class="entry-content-tags">
+										<a href="https://#/gurme/las-mejores-recetas/clasificacion/saludable/">Saludable</a>										</div>
+										<div class="entry-content-description">
+											<p>Un plato sano y fácil de preparar es lo que os proponemos con esta receta. Disfruta de esta <strong>mezcla de pescado y verduras</strong> tan sabrosa gracias al salteado.</p>
+										</div>
+									</div><!-- .entry-content -->
+																
+								<footer class="entry-meta">
+									<div class="entry-meta-footer">
+											<div class="iconos-compartir">
+		<ul>
+			<li class="twitter">
+								<a rel="nofollow" title="Publicarlo en Twitter" class="item icono-compartir twitter" 
+					onClick="javascript:window.open('https://twitter.com/intent/tweet?url=http://#/tusrecetas/recetas/andalucia/salteado-de-verduras-con-rape.html&text=Salteado de verduras con rape', 'TwitterWindow', 'width=800, height=600');" 
+					href="javascript:void(0)">
+						<i class="fa fa-twitter"></i>
+				</a>
+			</li>
+			<li class="facebook">
+								<a rel="nofollow" title="Publicar en Facebook" class="item icono-compartir facebook" 
+					onClick="javascript:window.open('https://www.facebook.com/sharer/sharer.php?u=http://#/tusrecetas/recetas/andalucia/salteado-de-verduras-con-rape.html', 'FacebookWindow', 'width=800, height=600');"
+					href="javascript:void(0)">
+						<i class="fa fa-facebook"></i>
+				</a>
+			</li>
+			
+									<li class="comments">
+				<a class="item icon-comment dsq-comment-count comment-link commentslink" data-disqus-identifier="" href="http://#/tusrecetas/recetas/andalucia/salteado-de-verduras-con-rape.html#commentsDiv">
+					<i class="fa fa-comment"></i>
+				</a>
+			</li>
+					</ul>		
+	</div>									</div><!-- end .entry-meta-footer -->
+										
+								</footer><!-- .entry-meta -->
+
+							</article><!-- #post -->
+											
+													
+							<article id="post-126205" class="post-126205 las-mejores-recetas type-las-mejores-recetas status-publish has-post-thumbnail hentry base-plato-verdurasylegumbres estacionalidad-todo-el-anio clasificaciones-saludable">
+								
+								<header class="entry-header">
+									
+																											
+																		 <a href="http://#/tusrecetas/recetas/andalucia/solomillo-de-cerdo-iberico-con-salteado-de-verduras.html"> 										<img src="sites/24/2011/02/solomillo-de-cerdo-iberico-con-salteado-de-verduras-960x540.jpg" alt="Solomillo de cerdo ibérico con salteado de verduras: recetas con verduras" width="960" height="540" />
+									</a>	
+
+																		<h2 class="entry-title">
+										<a href="http://#/tusrecetas/recetas/andalucia/solomillo-de-cerdo-iberico-con-salteado-de-verduras.html" title="Solomillo de cerdo ibérico con salteado de verduras" rel="bookmark">											<span>Solomillo de cerdo ibérico con salteado de verduras</span>
+										</a>	
+									</h2>
+									
+								</header><!-- .entry-header -->
+								
+																	<div class="entry-content">
+										<div class="entry-content-tags">
+										<a href="https://#/gurme/las-mejores-recetas/clasificacion/saludable/">Saludable</a>										</div>
+										<div class="entry-content-description">
+											<p>El <strong>solomillo de cerdo</strong>, debido a su suave sabor y textura es una de las carnes más valoradas por los restaurantes y familias españolas. Hoy lo acompañamos con un <strong>salteado de verduras</strong>, por lo que nos vamos a encontrar ante un plato muy saludable y completo.</p>
+										</div>
+									</div><!-- .entry-content -->
+																
+								<footer class="entry-meta">
+									<div class="entry-meta-footer">
+											<div class="iconos-compartir">
+		<ul>
+			<li class="twitter">
+								<a rel="nofollow" title="Publicarlo en Twitter" class="item icono-compartir twitter" 
+					onClick="javascript:window.open('https://twitter.com/intent/tweet?url=http://#/tusrecetas/recetas/andalucia/solomillo-de-cerdo-iberico-con-salteado-de-verduras.html&text=Solomillo de cerdo ibérico con salteado de verduras', 'TwitterWindow', 'width=800, height=600');" 
+					href="javascript:void(0)">
+						<i class="fa fa-twitter"></i>
+				</a>
+			</li>
+			<li class="facebook">
+								<a rel="nofollow" title="Publicar en Facebook" class="item icono-compartir facebook" 
+					onClick="javascript:window.open('https://www.facebook.com/sharer/sharer.php?u=http://#/tusrecetas/recetas/andalucia/solomillo-de-cerdo-iberico-con-salteado-de-verduras.html', 'FacebookWindow', 'width=800, height=600');"
+					href="javascript:void(0)">
+						<i class="fa fa-facebook"></i>
+				</a>
+			</li>
+			
+									<li class="comments">
+				<a class="item icon-comment dsq-comment-count comment-link commentslink" data-disqus-identifier="" href="http://#/tusrecetas/recetas/andalucia/solomillo-de-cerdo-iberico-con-salteado-de-verduras.html#commentsDiv">
+					<i class="fa fa-comment"></i>
+				</a>
+			</li>
+					</ul>		
+	</div>									</div><!-- end .entry-meta-footer -->
+										
+								</footer><!-- .entry-meta -->
+
+							</article><!-- #post -->
+											
+													
+							<article id="post-126205" class="post-126205 las-mejores-recetas type-las-mejores-recetas status-publish has-post-thumbnail hentry base-plato-verdurasylegumbres estacionalidad-todo-el-anio clasificaciones-saludable">
+								
+								<header class="entry-header">
+									
+																											
+																		 <a href="http://#/tusrecetas/recetas/andalucia/budin-de-verduras.html"> 										<img src="sites/24/2013/05/budin-de-verduras-960x540.jpg" alt="Budín de verduras: recetas con verduras" width="960" height="540" />
+									</a>	
+
+																		<h2 class="entry-title">
+										<a href="http://#/tusrecetas/recetas/andalucia/budin-de-verduras.html" title="Budín de verduras" rel="bookmark">											<span>Budín de verduras</span>
+										</a>	
+									</h2>
+									
+								</header><!-- .entry-header -->
+								
+																	<div class="entry-content">
+										<div class="entry-content-tags">
+										<a href="https://#/gurme/las-mejores-recetas/clasificacion/saludable/">Saludable</a>										</div>
+										<div class="entry-content-description">
+											<p>Esta receta de <strong>budín de verduras</strong> es muy versátil, puesto que podemos prepararla con las verduras que más nos gusten. Además, este budín se puede tomar tanto frío como caliente, por lo que podremos prepararlo en cualquier época del año.</p>
+										</div>
+									</div><!-- .entry-content -->
+																
+								<footer class="entry-meta">
+									<div class="entry-meta-footer">
+											<div class="iconos-compartir">
+		<ul>
+			<li class="twitter">
+								<a rel="nofollow" title="Publicarlo en Twitter" class="item icono-compartir twitter" 
+					onClick="javascript:window.open('https://twitter.com/intent/tweet?url=http://#/tusrecetas/recetas/andalucia/budin-de-verduras.html&text=Budín de verduras', 'TwitterWindow', 'width=800, height=600');" 
+					href="javascript:void(0)">
+						<i class="fa fa-twitter"></i>
+				</a>
+			</li>
+			<li class="facebook">
+								<a rel="nofollow" title="Publicar en Facebook" class="item icono-compartir facebook" 
+					onClick="javascript:window.open('https://www.facebook.com/sharer/sharer.php?u=http://#/tusrecetas/recetas/andalucia/budin-de-verduras.html', 'FacebookWindow', 'width=800, height=600');"
+					href="javascript:void(0)">
+						<i class="fa fa-facebook"></i>
+				</a>
+			</li>
+			
+									<li class="comments">
+				<a class="item icon-comment dsq-comment-count comment-link commentslink" data-disqus-identifier="" href="http://#/tusrecetas/recetas/andalucia/budin-de-verduras.html#commentsDiv">
+					<i class="fa fa-comment"></i>
+				</a>
+			</li>
+					</ul>		
+	</div>									</div><!-- end .entry-meta-footer -->
+										
+								</footer><!-- .entry-meta -->
+
+							</article><!-- #post -->
+											
+													
+							<article id="post-126205" class="post-126205 las-mejores-recetas type-las-mejores-recetas status-publish has-post-thumbnail hentry base-plato-verdurasylegumbres estacionalidad-todo-el-anio clasificaciones-saludable">
+								
+								<header class="entry-header">
+									
+																											
+																		 <a href="http://#/tusrecetas/recetas/andalucia/lentejas-al-curry-con-verduras.html"> 										<img src="sites/24/2015/04/lentejas-al-curry-con-verduras-960x540.jpg" alt="Lentejas al curry con verduras: recetas con verduras" width="960" height="540" />
+									</a>	
+
+																		<h2 class="entry-title">
+										<a href="http://#/tusrecetas/recetas/andalucia/lentejas-al-curry-con-verduras.html" title="Lentejas al curry con verduras" rel="bookmark">											<span>Lentejas al curry con verduras</span>
+										</a>	
+									</h2>
+									
+								</header><!-- .entry-header -->
+								
+																	<div class="entry-content">
+										<div class="entry-content-tags">
+										<a href="https://#/gurme/las-mejores-recetas/clasificacion/saludable/">Saludable</a>										</div>
+										<div class="entry-content-description">
+											<p>En esta ocasión nos vamos a olvidar de las <strong>recetas de lentejas</strong> más tradicionales para presentar un plato más ligero y con un toque especial de curry.</p>
+										</div>
+									</div><!-- .entry-content -->
+																
+								<footer class="entry-meta">
+									<div class="entry-meta-footer">
+											<div class="iconos-compartir">
+		<ul>
+			<li class="twitter">
+								<a rel="nofollow" title="Publicarlo en Twitter" class="item icono-compartir twitter" 
+					onClick="javascript:window.open('https://twitter.com/intent/tweet?url=http://#/tusrecetas/recetas/andalucia/lentejas-al-curry-con-verduras.html&text=Lentejas al curry con verduras', 'TwitterWindow', 'width=800, height=600');" 
+					href="javascript:void(0)">
+						<i class="fa fa-twitter"></i>
+				</a>
+			</li>
+			<li class="facebook">
+								<a rel="nofollow" title="Publicar en Facebook" class="item icono-compartir facebook" 
+					onClick="javascript:window.open('https://www.facebook.com/sharer/sharer.php?u=http://#/tusrecetas/recetas/andalucia/lentejas-al-curry-con-verduras.html', 'FacebookWindow', 'width=800, height=600');"
+					href="javascript:void(0)">
+						<i class="fa fa-facebook"></i>
+				</a>
+			</li>
+			
+									<li class="comments">
+				<a class="item icon-comment dsq-comment-count comment-link commentslink" data-disqus-identifier="" href="http://#/tusrecetas/recetas/andalucia/lentejas-al-curry-con-verduras.html#commentsDiv">
+					<i class="fa fa-comment"></i>
+				</a>
+			</li>
+					</ul>		
+	</div>									</div><!-- end .entry-meta-footer -->
+										
+								</footer><!-- .entry-meta -->
+
+							</article><!-- #post -->
+											
+													
+							<article id="post-126205" class="post-126205 las-mejores-recetas type-las-mejores-recetas status-publish has-post-thumbnail hentry base-plato-verdurasylegumbres estacionalidad-todo-el-anio clasificaciones-saludable">
+								
+								<header class="entry-header">
+									
+																											
+																		 <a href="http://#/tusrecetas/recetas/andalucia/menestra-de-verduras-y-jamon.html"> 										<img src="sites/24/2015/01/menestra-de-verduras-y-jamon-960x540.jpg" alt="Menestra de verduras y jamón: recetas con verduras" width="960" height="540" />
+									</a>	
+
+																		<h2 class="entry-title">
+										<a href="http://#/tusrecetas/recetas/andalucia/menestra-de-verduras-y-jamon.html" title="Menestra de verduras y jamón" rel="bookmark">											<span>Menestra de verduras y jamón</span>
+										</a>	
+									</h2>
+									
+								</header><!-- .entry-header -->
+								
+																	<div class="entry-content">
+										<div class="entry-content-tags">
+										<a href="https://#/gurme/las-mejores-recetas/clasificacion/saludable/">Saludable</a>										</div>
+										<div class="entry-content-description">
+											<p>La <strong>menestra</strong> es una de las formas más exquisita de tomar verduras. Es un plato que además puedes adaptar al gusto de los comensales.</p>
+										</div>
+									</div><!-- .entry-content -->
+																
+								<footer class="entry-meta">
+									<div class="entry-meta-footer">
+											<div class="iconos-compartir">
+		<ul>
+			<li class="twitter">
+								<a rel="nofollow" title="Publicarlo en Twitter" class="item icono-compartir twitter" 
+					onClick="javascript:window.open('https://twitter.com/intent/tweet?url=http://#/tusrecetas/recetas/andalucia/menestra-de-verduras-y-jamon.html&text=Menestra de verduras y jamón', 'TwitterWindow', 'width=800, height=600');" 
+					href="javascript:void(0)">
+						<i class="fa fa-twitter"></i>
+				</a>
+			</li>
+			<li class="facebook">
+								<a rel="nofollow" title="Publicar en Facebook" class="item icono-compartir facebook" 
+					onClick="javascript:window.open('https://www.facebook.com/sharer/sharer.php?u=http://#/tusrecetas/recetas/andalucia/menestra-de-verduras-y-jamon.html', 'FacebookWindow', 'width=800, height=600');"
+					href="javascript:void(0)">
+						<i class="fa fa-facebook"></i>
+				</a>
+			</li>
+			
+									<li class="comments">
+				<a class="item icon-comment dsq-comment-count comment-link commentslink" data-disqus-identifier="" href="http://#/tusrecetas/recetas/andalucia/menestra-de-verduras-y-jamon.html#commentsDiv">
+					<i class="fa fa-comment"></i>
+				</a>
+			</li>
+					</ul>		
+	</div>									</div><!-- end .entry-meta-footer -->
+										
+								</footer><!-- .entry-meta -->
+
+							</article><!-- #post -->
+											
+													
+							<article id="post-126205" class="post-126205 las-mejores-recetas type-las-mejores-recetas status-publish has-post-thumbnail hentry base-plato-verdurasylegumbres estacionalidad-todo-el-anio clasificaciones-saludable">
+								
+								<header class="entry-header">
+									
+																											
+																		 <a href="http://#/tusrecetas/recetas/andalucia/tagliatelles-con-verduras.html"> 										<img src="sites/24/2014/06/tagliattele-verduras-960x540.jpg" alt="Tagliatelles con verduras: recetas con verduras" width="960" height="540" />
+									</a>	
+
+																		<h2 class="entry-title">
+										<a href="http://#/tusrecetas/recetas/andalucia/tagliatelles-con-verduras.html" title="Tagliatelles con verduras" rel="bookmark">											<span>Tagliatelles con verduras</span>
+										</a>	
+									</h2>
+									
+								</header><!-- .entry-header -->
+								
+																	<div class="entry-content">
+										<div class="entry-content-tags">
+										<a href="https://#/gurme/las-mejores-recetas/clasificacion/saludable/">Saludable</a>										</div>
+										<div class="entry-content-description">
+											<p>Hoy os proponemos un rico <strong>plato de pasta acompañada con unas sanas verduras</strong>. Ideal para los que quieren comer bien y no poner peso.</p>
+										</div>
+									</div><!-- .entry-content -->
+																
+								<footer class="entry-meta">
+									<div class="entry-meta-footer">
+											<div class="iconos-compartir">
+		<ul>
+			<li class="twitter">
+								<a rel="nofollow" title="Publicarlo en Twitter" class="item icono-compartir twitter" 
+					onClick="javascript:window.open('https://twitter.com/intent/tweet?url=http://#/tusrecetas/recetas/andalucia/tagliatelles-con-verduras.html&text=Tagliatelles con verduras', 'TwitterWindow', 'width=800, height=600');" 
+					href="javascript:void(0)">
+						<i class="fa fa-twitter"></i>
+				</a>
+			</li>
+			<li class="facebook">
+								<a rel="nofollow" title="Publicar en Facebook" class="item icono-compartir facebook" 
+					onClick="javascript:window.open('https://www.facebook.com/sharer/sharer.php?u=http://#/tusrecetas/recetas/andalucia/tagliatelles-con-verduras.html', 'FacebookWindow', 'width=800, height=600');"
+					href="javascript:void(0)">
+						<i class="fa fa-facebook"></i>
+				</a>
+			</li>
+			
+									<li class="comments">
+				<a class="item icon-comment dsq-comment-count comment-link commentslink" data-disqus-identifier="" href="http://#/tusrecetas/recetas/andalucia/tagliatelles-con-verduras.html#commentsDiv">
+					<i class="fa fa-comment"></i>
+				</a>
+			</li>
+					</ul>		
+	</div>									</div><!-- end .entry-meta-footer -->
+										
+								</footer><!-- .entry-meta -->
+
+							</article><!-- #post -->
+											
+													
+							<article id="post-126205" class="post-126205 las-mejores-recetas type-las-mejores-recetas status-publish has-post-thumbnail hentry base-plato-verdurasylegumbres estacionalidad-todo-el-anio clasificaciones-saludable">
+								
+								<header class="entry-header">
+									
+																											
+																		 <a href="http://#/tusrecetas/recetas/andalucia/capas-de-verduras-asadas.html"> 										<img src="sites/24/2013/01/capas-verduras-asadas-960x540.jpg" alt="Capas de verduras asadas: recetas con verduras" width="960" height="540" />
+									</a>	
+
+																		<h2 class="entry-title">
+										<a href="http://#/tusrecetas/recetas/andalucia/capas-de-verduras-asadas.html" title="Capas de verduras asadas" rel="bookmark">											<span>Capas de verduras asadas</span>
+										</a>	
+									</h2>
+									
+								</header><!-- .entry-header -->
+								
+																	<div class="entry-content">
+										<div class="entry-content-tags">
+										<a href="https://#/gurme/las-mejores-recetas/clasificacion/saludable/">Saludable</a>										</div>
+										<div class="entry-content-description">
+											<p>Hoy proponemos un<strong> plato de verduras asadas</strong> que, al cocinarlas de esta manera, conseguimos que tomen un sabor diferente y muy apetitoso.</p>
+										</div>
+									</div><!-- .entry-content -->
+																
+								<footer class="entry-meta">
+									<div class="entry-meta-footer">
+											<div class="iconos-compartir">
+		<ul>
+			<li class="twitter">
+								<a rel="nofollow" title="Publicarlo en Twitter" class="item icono-compartir twitter" 
+					onClick="javascript:window.open('https://twitter.com/intent/tweet?url=http://#/tusrecetas/recetas/andalucia/capas-de-verduras-asadas.html&text=Capas de verduras asadas', 'TwitterWindow', 'width=800, height=600');" 
+					href="javascript:void(0)">
+						<i class="fa fa-twitter"></i>
+				</a>
+			</li>
+			<li class="facebook">
+								<a rel="nofollow" title="Publicar en Facebook" class="item icono-compartir facebook" 
+					onClick="javascript:window.open('https://www.facebook.com/sharer/sharer.php?u=http://#/tusrecetas/recetas/andalucia/capas-de-verduras-asadas.html', 'FacebookWindow', 'width=800, height=600');"
+					href="javascript:void(0)">
+						<i class="fa fa-facebook"></i>
+				</a>
+			</li>
+			
+									<li class="comments">
+				<a class="item icon-comment dsq-comment-count comment-link commentslink" data-disqus-identifier="" href="http://#/tusrecetas/recetas/andalucia/capas-de-verduras-asadas.html#commentsDiv">
+					<i class="fa fa-comment"></i>
+				</a>
+			</li>
+					</ul>		
+	</div>									</div><!-- end .entry-meta-footer -->
+										
+								</footer><!-- .entry-meta -->
+
+							</article><!-- #post -->
+											
+													
+							<article id="post-126205" class="post-126205 las-mejores-recetas type-las-mejores-recetas status-publish has-post-thumbnail hentry base-plato-verdurasylegumbres estacionalidad-todo-el-anio clasificaciones-saludable">
+								
+								<header class="entry-header">
+									
+																											
+																		 <a href="http://#/tusrecetas/recetas/andalucia/aperitivo-de-verduras-con-salsa-romesco.html"> 										<img src="sites/24/2014/06/verduras-romesco-960x540.jpg" alt="Aperitivo de verduras con salsa romesco: recetas con verduras" width="960" height="540" />
+									</a>	
+
+																		<h2 class="entry-title">
+										<a href="http://#/tusrecetas/recetas/andalucia/aperitivo-de-verduras-con-salsa-romesco.html" title="Aperitivo de verduras con salsa romesco" rel="bookmark">											<span>Aperitivo de verduras con salsa romesco</span>
+										</a>	
+									</h2>
+									
+								</header><!-- .entry-header -->
+								
+																	<div class="entry-content">
+										<div class="entry-content-tags">
+										<a href="https://#/gurme/las-mejores-recetas/clasificacion/saludable/">Saludable</a>										</div>
+										<div class="entry-content-description">
+											<p>La <strong>salsa romesco</strong> combina muy bien tanto con carnes como con verduras. En este caso hemos optado por la segunda opción para preparar unos aperitivos muy vistosos.</p>
+										</div>
+									</div><!-- .entry-content -->
+																
+								<footer class="entry-meta">
+									<div class="entry-meta-footer">
+											<div class="iconos-compartir">
+		<ul>
+			<li class="twitter">
+								<a rel="nofollow" title="Publicarlo en Twitter" class="item icono-compartir twitter" 
+					onClick="javascript:window.open('https://twitter.com/intent/tweet?url=http://#/tusrecetas/recetas/andalucia/aperitivo-de-verduras-con-salsa-romesco.html&text=Aperitivo de verduras con salsa romesco', 'TwitterWindow', 'width=800, height=600');" 
+					href="javascript:void(0)">
+						<i class="fa fa-twitter"></i>
+				</a>
+			</li>
+			<li class="facebook">
+								<a rel="nofollow" title="Publicar en Facebook" class="item icono-compartir facebook" 
+					onClick="javascript:window.open('https://www.facebook.com/sharer/sharer.php?u=http://#/tusrecetas/recetas/andalucia/aperitivo-de-verduras-con-salsa-romesco.html', 'FacebookWindow', 'width=800, height=600');"
+					href="javascript:void(0)">
+						<i class="fa fa-facebook"></i>
+				</a>
+			</li>
+			
+									<li class="comments">
+				<a class="item icon-comment dsq-comment-count comment-link commentslink" data-disqus-identifier="" href="http://#/tusrecetas/recetas/andalucia/aperitivo-de-verduras-con-salsa-romesco.html#commentsDiv">
+					<i class="fa fa-comment"></i>
+				</a>
+			</li>
+					</ul>		
+	</div>									</div><!-- end .entry-meta-footer -->
+										
+								</footer><!-- .entry-meta -->
+
+							</article><!-- #post -->
+											
+													
+							<article id="post-126205" class="post-126205 las-mejores-recetas type-las-mejores-recetas status-publish has-post-thumbnail hentry base-plato-verdurasylegumbres estacionalidad-todo-el-anio clasificaciones-saludable">
+								
+								<header class="entry-header">
+									
+																											
+																		 <a href="http://#/tusrecetas/recetas/andalucia/sopa-de-verduras-y-legumbres-a-la-italiana.html"> 										<img src="sites/24/2015/11/sopa-de-verduras-y-legumbres-a-la-italiana-960x540.jpg" alt="Sopa de verduras y legumbres a la italiana: recetas con verduras" width="960" height="540" />
+									</a>	
+
+																		<h2 class="entry-title">
+										<a href="http://#/tusrecetas/recetas/andalucia/sopa-de-verduras-y-legumbres-a-la-italiana.html" title="Sopa de verduras y legumbres a la italiana" rel="bookmark">											<span>Sopa de verduras y legumbres a la italiana</span>
+										</a>	
+									</h2>
+									
+								</header><!-- .entry-header -->
+								
+																	<div class="entry-content">
+										<div class="entry-content-tags">
+										<a href="https://#/gurme/las-mejores-recetas/clasificacion/saludable/">Saludable</a>										</div>
+										<div class="entry-content-description">
+											<p>Esta <strong>sopa de verduras y legumbres</strong> típica de la cocina italiana se conoce como sopa minestrone. Se puede elaborar con diferentes verduras y legumbres y también es típico añadirle unos fideos o un poco de arroz. Aquí te dejamos una sencilla receta para que puedas prepararla.</p>
+										</div>
+									</div><!-- .entry-content -->
+																
+								<footer class="entry-meta">
+									<div class="entry-meta-footer">
+											<div class="iconos-compartir">
+		<ul>
+			<li class="twitter">
+								<a rel="nofollow" title="Publicarlo en Twitter" class="item icono-compartir twitter" 
+					onClick="javascript:window.open('https://twitter.com/intent/tweet?url=http://#/tusrecetas/recetas/andalucia/sopa-de-verduras-y-legumbres-a-la-italiana.html&text=Sopa de verduras y legumbres a la italiana', 'TwitterWindow', 'width=800, height=600');" 
+					href="javascript:void(0)">
+						<i class="fa fa-twitter"></i>
+				</a>
+			</li>
+			<li class="facebook">
+								<a rel="nofollow" title="Publicar en Facebook" class="item icono-compartir facebook" 
+					onClick="javascript:window.open('https://www.facebook.com/sharer/sharer.php?u=http://#/tusrecetas/recetas/andalucia/sopa-de-verduras-y-legumbres-a-la-italiana.html', 'FacebookWindow', 'width=800, height=600');"
+					href="javascript:void(0)">
+						<i class="fa fa-facebook"></i>
+				</a>
+			</li>
+			
+									<li class="comments">
+				<a class="item icon-comment dsq-comment-count comment-link commentslink" data-disqus-identifier="" href="http://#/tusrecetas/recetas/andalucia/sopa-de-verduras-y-legumbres-a-la-italiana.html#commentsDiv">
+					<i class="fa fa-comment"></i>
+				</a>
+			</li>
+					</ul>		
+	</div>									</div><!-- end .entry-meta-footer -->
+										
+								</footer><!-- .entry-meta -->
+
+							</article><!-- #post -->
+											
+													
+							<article id="post-126205" class="post-126205 las-mejores-recetas type-las-mejores-recetas status-publish has-post-thumbnail hentry base-plato-verdurasylegumbres estacionalidad-todo-el-anio clasificaciones-saludable">
+								
+								<header class="entry-header">
+									
+																											
+																		 <a href="http://#/gurme/recetas/verduras-salteadas-sobre-tosta-de-polenta/"> 										<img src="sites/24/2011/03/2741_verduraspolenta_1301563595.jpg" alt="Verduras salteadas sobre tosta de polenta: recetas con verduras" width="465" height="260" />
+									</a>	
+
+																		<h2 class="entry-title">
+										<a href="http://#/gurme/recetas/verduras-salteadas-sobre-tosta-de-polenta/" title="Verduras salteadas sobre tosta de polenta" rel="bookmark">											<span>Verduras salteadas sobre tosta de polenta</span>
+										</a>	
+									</h2>
+									
+								</header><!-- .entry-header -->
+								
+																	<div class="entry-content">
+										<div class="entry-content-tags">
+										<a href="https://#/gurme/las-mejores-recetas/clasificacion/economica/">Económica</a>										</div>
+										<div class="entry-content-description">
+											<p>Continuamos nuestro recetario con una original <strong>tosta de polenta con verduras salteadas</strong>, un plato que supone una forma diferente y nutritiva de presentar las verduras.</p>
+										</div>
+									</div><!-- .entry-content -->
+																
+								<footer class="entry-meta">
+									<div class="entry-meta-footer">
+											<div class="iconos-compartir">
+		<ul>
+			<li class="twitter">
+								<a rel="nofollow" title="Publicarlo en Twitter" class="item icono-compartir twitter" 
+					onClick="javascript:window.open('https://twitter.com/intent/tweet?url=http://#/gurme/recetas/verduras-salteadas-sobre-tosta-de-polenta/&text=Verduras salteadas sobre tosta de polenta', 'TwitterWindow', 'width=800, height=600');" 
+					href="javascript:void(0)">
+						<i class="fa fa-twitter"></i>
+				</a>
+			</li>
+			<li class="facebook">
+								<a rel="nofollow" title="Publicar en Facebook" class="item icono-compartir facebook" 
+					onClick="javascript:window.open('https://www.facebook.com/sharer/sharer.php?u=http://#/gurme/recetas/verduras-salteadas-sobre-tosta-de-polenta/', 'FacebookWindow', 'width=800, height=600');"
+					href="javascript:void(0)">
+						<i class="fa fa-facebook"></i>
+				</a>
+			</li>
+			
+									<li class="comments">
+				<a class="item icon-comment dsq-comment-count comment-link commentslink" data-disqus-identifier="" href="http://#/gurme/recetas/verduras-salteadas-sobre-tosta-de-polenta/#commentsDiv">
+					<i class="fa fa-comment"></i>
+				</a>
+			</li>
+					</ul>		
+	</div>									</div><!-- end .entry-meta-footer -->
+										
+								</footer><!-- .entry-meta -->
+
+							</article><!-- #post -->
+											
+													
+							<article id="post-126205" class="post-126205 las-mejores-recetas type-las-mejores-recetas status-publish has-post-thumbnail hentry base-plato-verdurasylegumbres estacionalidad-todo-el-anio clasificaciones-saludable">
+								
+								<header class="entry-header">
+									
+																											
+																		 <a href="http://#/gurme/recetas/verduras-salteadas-con-queso-y-sesamo/"> 										<img src="sites/24/2015/10/verduras-salteadas-con-queso-y-sesamo-960x540.jpg" alt="Verduras salteadas con queso y sésamo: recetas con verduras" width="960" height="540" />
+									</a>	
+
+																		<h2 class="entry-title">
+										<a href="http://#/gurme/recetas/verduras-salteadas-con-queso-y-sesamo/" title="Verduras salteadas con queso y sésamo" rel="bookmark">											<span>Verduras salteadas con queso y sésamo</span>
+										</a>	
+									</h2>
+									
+								</header><!-- .entry-header -->
+								
+																	<div class="entry-content">
+										<div class="entry-content-tags">
+										<a href="https://#/gurme/las-mejores-recetas/clasificacion/economica/">Económica</a><a href="https://#/gurme/las-mejores-recetas/clasificacion/rapido-y-facil/">Rápido y Fácil</a><a href="https://#/gurme/las-mejores-recetas/clasificacion/saludable/">Saludable</a>										</div>
+										<div class="entry-content-description">
+											<p>Esta sencilla <strong>receta de verduras salteadas con queso y sésamo</strong> os puede sacar de más de un apuro, a la vez que os ayudará a preparar una comida ligera y nutritiva.</p>
+										</div>
+									</div><!-- .entry-content -->
+																
+								<footer class="entry-meta">
+									<div class="entry-meta-footer">
+											<div class="iconos-compartir">
+		<ul>
+			<li class="twitter">
+								<a rel="nofollow" title="Publicarlo en Twitter" class="item icono-compartir twitter" 
+					onClick="javascript:window.open('https://twitter.com/intent/tweet?url=http://#/gurme/recetas/verduras-salteadas-con-queso-y-sesamo/&text=Verduras salteadas con queso y sésamo', 'TwitterWindow', 'width=800, height=600');" 
+					href="javascript:void(0)">
+						<i class="fa fa-twitter"></i>
+				</a>
+			</li>
+			<li class="facebook">
+								<a rel="nofollow" title="Publicar en Facebook" class="item icono-compartir facebook" 
+					onClick="javascript:window.open('https://www.facebook.com/sharer/sharer.php?u=http://#/gurme/recetas/verduras-salteadas-con-queso-y-sesamo/', 'FacebookWindow', 'width=800, height=600');"
+					href="javascript:void(0)">
+						<i class="fa fa-facebook"></i>
+				</a>
+			</li>
+			
+									<li class="comments">
+				<a class="item icon-comment dsq-comment-count comment-link commentslink" data-disqus-identifier="" href="http://#/gurme/recetas/verduras-salteadas-con-queso-y-sesamo/#commentsDiv">
+					<i class="fa fa-comment"></i>
+				</a>
+			</li>
+					</ul>		
+	</div>									</div><!-- end .entry-meta-footer -->
+										
+								</footer><!-- .entry-meta -->
+
+							</article><!-- #post -->
+											
+													
+							<article id="post-126205" class="post-126205 las-mejores-recetas type-las-mejores-recetas status-publish has-post-thumbnail hentry base-plato-verdurasylegumbres estacionalidad-todo-el-anio clasificaciones-saludable">
+								
+								<header class="entry-header">
+									
+																											
+																		 <a href="http://#/gurme/recetas/panache-de-verduras-salteadas/"> 										<img src="sites/24/2011/08/panache-de-verduras-salteadas-960x540.jpg" alt="Panaché de verduras salteadas: recetas con verduras" width="960" height="540" />
+									</a>	
+
+																		<h2 class="entry-title">
+										<a href="http://#/gurme/recetas/panache-de-verduras-salteadas/" title="Panaché de verduras salteadas" rel="bookmark">											<span>Panaché de verduras salteadas</span>
+										</a>	
+									</h2>
+									
+								</header><!-- .entry-header -->
+								
+																	<div class="entry-content">
+										<div class="entry-content-tags">
+										<a href="https://#/gurme/las-mejores-recetas/clasificacion/economica/">Económica</a><a href="https://#/gurme/las-mejores-recetas/clasificacion/rapido-y-facil/">Rápido y Fácil</a><a href="https://#/gurme/las-mejores-recetas/clasificacion/saludable/">Saludable</a>										</div>
+										<div class="entry-content-description">
+											<p>Aunque la tradicional <strong>panaché de verduras</strong> se hace al vapor, en esta ocasión vamos a dar a las verduras un poco más de sabor salteándolas.</p>
+										</div>
+									</div><!-- .entry-content -->
+																
+								<footer class="entry-meta">
+									<div class="entry-meta-footer">
+											<div class="iconos-compartir">
+		<ul>
+			<li class="twitter">
+								<a rel="nofollow" title="Publicarlo en Twitter" class="item icono-compartir twitter" 
+					onClick="javascript:window.open('https://twitter.com/intent/tweet?url=http://#/gurme/recetas/panache-de-verduras-salteadas/&text=Panaché de verduras salteadas', 'TwitterWindow', 'width=800, height=600');" 
+					href="javascript:void(0)">
+						<i class="fa fa-twitter"></i>
+				</a>
+			</li>
+			<li class="facebook">
+								<a rel="nofollow" title="Publicar en Facebook" class="item icono-compartir facebook" 
+					onClick="javascript:window.open('https://www.facebook.com/sharer/sharer.php?u=http://#/gurme/recetas/panache-de-verduras-salteadas/', 'FacebookWindow', 'width=800, height=600');"
+					href="javascript:void(0)">
+						<i class="fa fa-facebook"></i>
+				</a>
+			</li>
+			
+									<li class="comments">
+				<a class="item icon-comment dsq-comment-count comment-link commentslink" data-disqus-identifier="" href="http://#/gurme/recetas/panache-de-verduras-salteadas/#commentsDiv">
+					<i class="fa fa-comment"></i>
+				</a>
+			</li>
+					</ul>		
+	</div>									</div><!-- end .entry-meta-footer -->
+										
+								</footer><!-- .entry-meta -->
+
+							</article><!-- #post -->
+											
+													
+							<article id="post-126205" class="post-126205 las-mejores-recetas type-las-mejores-recetas status-publish has-post-thumbnail hentry base-plato-verdurasylegumbres estacionalidad-todo-el-anio clasificaciones-saludable">
+								
+								<header class="entry-header">
+									
+																											
+																		 <a href="http://#/gurme/recetas/salteado-de-verduras-con-huevo-escalfado/"> 										<img src="sites/24/2010/03/1278_salteadosetasverdurashuevoescalfado_1269076327.jpg" alt="Salteado de verduras con huevo escalfado: recetas con verduras" width="465" height="260" />
+									</a>	
+
+																		<h2 class="entry-title">
+										<a href="http://#/gurme/recetas/salteado-de-verduras-con-huevo-escalfado/" title="Salteado de verduras con huevo escalfado" rel="bookmark">											<span>Salteado de verduras con huevo escalfado</span>
+										</a>	
+									</h2>
+									
+								</header><!-- .entry-header -->
+								
+																	<div class="entry-content">
+										<div class="entry-content-tags">
+										<a href="https://#/gurme/las-mejores-recetas/clasificacion/economica/">Económica</a><a href="https://#/gurme/las-mejores-recetas/clasificacion/rapido-y-facil/">Rápido y Fácil</a><a href="https://#/gurme/las-mejores-recetas/clasificacion/saludable/">Saludable</a>										</div>
+										<div class="entry-content-description">
+											<p>Los <strong>salteados de verduras</strong> son siempre una elección muy acertada y saludable, que nos va a aportar infinidad de vitaminas, fibra y minerales. Además, son <strong>platos muy rápidos y sencillos</strong> de preparar.</p>
+										</div>
+									</div><!-- .entry-content -->
+																
+								<footer class="entry-meta">
+									<div class="entry-meta-footer">
+											<div class="iconos-compartir">
+		<ul>
+			<li class="twitter">
+								<a rel="nofollow" title="Publicarlo en Twitter" class="item icono-compartir twitter" 
+					onClick="javascript:window.open('https://twitter.com/intent/tweet?url=http://#/gurme/recetas/salteado-de-verduras-con-huevo-escalfado/&text=Salteado de verduras con huevo escalfado', 'TwitterWindow', 'width=800, height=600');" 
+					href="javascript:void(0)">
+						<i class="fa fa-twitter"></i>
+				</a>
+			</li>
+			<li class="facebook">
+								<a rel="nofollow" title="Publicar en Facebook" class="item icono-compartir facebook" 
+					onClick="javascript:window.open('https://www.facebook.com/sharer/sharer.php?u=http://#/gurme/recetas/salteado-de-verduras-con-huevo-escalfado/', 'FacebookWindow', 'width=800, height=600');"
+					href="javascript:void(0)">
+						<i class="fa fa-facebook"></i>
+				</a>
+			</li>
+			
+									<li class="comments">
+				<a class="item icon-comment dsq-comment-count comment-link commentslink" data-disqus-identifier="" href="http://#/gurme/recetas/salteado-de-verduras-con-huevo-escalfado/#commentsDiv">
+					<i class="fa fa-comment"></i>
+				</a>
+			</li>
+					</ul>		
+	</div>									</div><!-- end .entry-meta-footer -->
+										
+								</footer><!-- .entry-meta -->
+
+							</article><!-- #post -->
+											
+													
+							<article id="post-126205" class="post-126205 las-mejores-recetas type-las-mejores-recetas status-publish has-post-thumbnail hentry base-plato-verdurasylegumbres estacionalidad-todo-el-anio clasificaciones-saludable">
+								
+								<header class="entry-header">
+									
+																											
+																		 <a href="http://#/gurme/recetas/verduras-al-horno-con-jamon-serrano-y-queso-gratinado/"> 										<img src="sites/24/2009/07/424_verdurashornointerior_1248460946.jpg" alt="Verduras al horno con jamón serrano y queso gratinado: recetas con verduras" width="465" height="260" />
+									</a>	
+
+																		<h2 class="entry-title">
+										<a href="http://#/gurme/recetas/verduras-al-horno-con-jamon-serrano-y-queso-gratinado/" title="Verduras al horno con jamón serrano y queso gratinado" rel="bookmark">											<span>Verduras al horno con jamón serrano y queso gratinado</span>
+										</a>	
+									</h2>
+									
+								</header><!-- .entry-header -->
+								
+																	<div class="entry-content">
+										<div class="entry-content-tags">
+										<a href="https://#/gurme/las-mejores-recetas/clasificacion/economica/">Económica</a><a href="https://#/gurme/las-mejores-recetas/clasificacion/rapido-y-facil/">Rápido y Fácil</a><a href="https://#/gurme/las-mejores-recetas/clasificacion/saludable/">Saludable</a>										</div>
+										<div class="entry-content-description">
+											<p>Una r<strong>eceta de verduras al horno con jamón y queso gratinado</strong>, que les da un gran sabor. Sabrosa y muy nutritiva, supone una interesante alternativa para <strong>comer verduras</strong>.</p>
+										</div>
+									</div><!-- .entry-content -->
+																
+								<footer class="entry-meta">
+									<div class="entry-meta-footer">
+											<div class="iconos-compartir">
+		<ul>
+			<li class="twitter">
+								<a rel="nofollow" title="Publicarlo en Twitter" class="item icono-compartir twitter" 
+					onClick="javascript:window.open('https://twitter.com/intent/tweet?url=http://#/gurme/recetas/verduras-al-horno-con-jamon-serrano-y-queso-gratinado/&text=Verduras al horno con jamón serrano y queso gratinado', 'TwitterWindow', 'width=800, height=600');" 
+					href="javascript:void(0)">
+						<i class="fa fa-twitter"></i>
+				</a>
+			</li>
+			<li class="facebook">
+								<a rel="nofollow" title="Publicar en Facebook" class="item icono-compartir facebook" 
+					onClick="javascript:window.open('https://www.facebook.com/sharer/sharer.php?u=http://#/gurme/recetas/verduras-al-horno-con-jamon-serrano-y-queso-gratinado/', 'FacebookWindow', 'width=800, height=600');"
+					href="javascript:void(0)">
+						<i class="fa fa-facebook"></i>
+				</a>
+			</li>
+			
+									<li class="comments">
+				<a class="item icon-comment dsq-comment-count comment-link commentslink" data-disqus-identifier="" href="http://#/gurme/recetas/verduras-al-horno-con-jamon-serrano-y-queso-gratinado/#commentsDiv">
+					<i class="fa fa-comment"></i>
+				</a>
+			</li>
+					</ul>		
+	</div>									</div><!-- end .entry-meta-footer -->
+										
+								</footer><!-- .entry-meta -->
+
+							</article><!-- #post -->
+											
+													
+							<article id="post-126205" class="post-126205 las-mejores-recetas type-las-mejores-recetas status-publish has-post-thumbnail hentry base-plato-verdurasylegumbres estacionalidad-todo-el-anio clasificaciones-saludable">
+								
+								<header class="entry-header">
+									
+																											
+																		 <a href="http://#/gurme/recetas/verduras-asadas-con-queso-de-cabra-crujiente/"> 										<img src="sites/24/2013/01/verduras-asadas-con-queso-de-cabra-crujiente-960x540.jpg" alt="Verduras asadas con queso de cabra crujiente: recetas con verduras" width="960" height="540" />
+									</a>	
+
+																		<h2 class="entry-title">
+										<a href="http://#/gurme/recetas/verduras-asadas-con-queso-de-cabra-crujiente/" title="Verduras asadas con queso de cabra crujiente" rel="bookmark">											<span>Verduras asadas con queso de cabra crujiente</span>
+										</a>	
+									</h2>
+									
+								</header><!-- .entry-header -->
+								
+																	<div class="entry-content">
+										<div class="entry-content-tags">
+										<a href="https://#/gurme/las-mejores-recetas/clasificacion/economica/">Económica</a>										</div>
+										<div class="entry-content-description">
+											<p>Las verduras siempre son ideales cuando queremos hacer una comida sana. Por ello, las <strong>verduras asadas al horno</strong> son fáciles de preparar y saludables. Hoy las acompañamos con un poco de queso.</p>
+										</div>
+									</div><!-- .entry-content -->
+																
+								<footer class="entry-meta">
+									<div class="entry-meta-footer">
+											<div class="iconos-compartir">
+		<ul>
+			<li class="twitter">
+								<a rel="nofollow" title="Publicarlo en Twitter" class="item icono-compartir twitter" 
+					onClick="javascript:window.open('https://twitter.com/intent/tweet?url=http://#/gurme/recetas/verduras-asadas-con-queso-de-cabra-crujiente/&text=Verduras asadas con queso de cabra crujiente', 'TwitterWindow', 'width=800, height=600');" 
+					href="javascript:void(0)">
+						<i class="fa fa-twitter"></i>
+				</a>
+			</li>
+			<li class="facebook">
+								<a rel="nofollow" title="Publicar en Facebook" class="item icono-compartir facebook" 
+					onClick="javascript:window.open('https://www.facebook.com/sharer/sharer.php?u=http://#/gurme/recetas/verduras-asadas-con-queso-de-cabra-crujiente/', 'FacebookWindow', 'width=800, height=600');"
+					href="javascript:void(0)">
+						<i class="fa fa-facebook"></i>
+				</a>
+			</li>
+			
+									<li class="comments">
+				<a class="item icon-comment dsq-comment-count comment-link commentslink" data-disqus-identifier="" href="http://#/gurme/recetas/verduras-asadas-con-queso-de-cabra-crujiente/#commentsDiv">
+					<i class="fa fa-comment"></i>
+				</a>
+			</li>
+					</ul>		
+	</div>									</div><!-- end .entry-meta-footer -->
+										
+								</footer><!-- .entry-meta -->
+
+							</article><!-- #post -->
+											
+													
+							<article id="post-126205" class="post-126205 las-mejores-recetas type-las-mejores-recetas status-publish has-post-thumbnail hentry base-plato-verdurasylegumbres estacionalidad-todo-el-anio clasificaciones-saludable">
+								
+								<header class="entry-header">
+									
+																											
+																		 <a href="http://#/gurme/recetas/verduras-asadas-al-horno/"> 										<img src="sites/24/2009/07/581_verdurashornointerior_1249643048.jpg" alt="Verduras asadas al horno: recetas con verduras" width="465" height="260" />
+									</a>	
+
+																		<h2 class="entry-title">
+										<a href="http://#/gurme/recetas/verduras-asadas-al-horno/" title="Verduras asadas al horno" rel="bookmark">											<span>Verduras asadas al horno</span>
+										</a>	
+									</h2>
+									
+								</header><!-- .entry-header -->
+								
+																	<div class="entry-content">
+										<div class="entry-content-tags">
+										<a href="https://#/gurme/las-mejores-recetas/clasificacion/economica/">Económica</a><a href="https://#/gurme/las-mejores-recetas/clasificacion/rapido-y-facil/">Rápido y Fácil</a><a href="https://#/gurme/las-mejores-recetas/clasificacion/saludable/">Saludable</a>										</div>
+										<div class="entry-content-description">
+											<p>Para realizar esta <strong>receta de verduras</strong>, solo tienes que cortar las berenjenas y los calabacines en rodajas finas, espolvorear con sal gruesa y dejar reposar durante 15 minutos para que suelten el agua. Transcurrido ese tiempo, secaremos bien, y ¡directas al horno! Un plato saludable y riquísimo.</p>
+										</div>
+									</div><!-- .entry-content -->
+																
+								<footer class="entry-meta">
+									<div class="entry-meta-footer">
+											<div class="iconos-compartir">
+		<ul>
+			<li class="twitter">
+								<a rel="nofollow" title="Publicarlo en Twitter" class="item icono-compartir twitter" 
+					onClick="javascript:window.open('https://twitter.com/intent/tweet?url=http://#/gurme/recetas/verduras-asadas-al-horno/&text=Verduras asadas al horno', 'TwitterWindow', 'width=800, height=600');" 
+					href="javascript:void(0)">
+						<i class="fa fa-twitter"></i>
+				</a>
+			</li>
+			<li class="facebook">
+								<a rel="nofollow" title="Publicar en Facebook" class="item icono-compartir facebook" 
+					onClick="javascript:window.open('https://www.facebook.com/sharer/sharer.php?u=http://#/gurme/recetas/verduras-asadas-al-horno/', 'FacebookWindow', 'width=800, height=600');"
+					href="javascript:void(0)">
+						<i class="fa fa-facebook"></i>
+				</a>
+			</li>
+			
+									<li class="comments">
+				<a class="item icon-comment dsq-comment-count comment-link commentslink" data-disqus-identifier="" href="http://#/gurme/recetas/verduras-asadas-al-horno/#commentsDiv">
+					<i class="fa fa-comment"></i>
+				</a>
+			</li>
+					</ul>		
+	</div>									</div><!-- end .entry-meta-footer -->
+										
+								</footer><!-- .entry-meta -->
+
+							</article><!-- #post -->
+											
+													
+							<article id="post-126205" class="post-126205 las-mejores-recetas type-las-mejores-recetas status-publish has-post-thumbnail hentry base-plato-verdurasylegumbres estacionalidad-todo-el-anio clasificaciones-saludable">
+								
+								<header class="entry-header">
+									
+																											
+																		 <a href="http://#/gurme/recetas/verduras-con-arroz-al-horno-y-morcilla/"> 										<img src="sites/24/2011/10/verduras-con-arroz-al-horno-y-morcilla-960x540.jpg" alt="Verduras con arroz al horno y morcilla: recetas con verduras" width="960" height="540" />
+									</a>	
+
+																		<h2 class="entry-title">
+										<a href="http://#/gurme/recetas/verduras-con-arroz-al-horno-y-morcilla/" title="Verduras con arroz al horno y morcilla" rel="bookmark">											<span>Verduras con arroz al horno y morcilla</span>
+										</a>	
+									</h2>
+									
+								</header><!-- .entry-header -->
+								
+																	<div class="entry-content">
+										<div class="entry-content-tags">
+										<a href="https://#/gurme/las-mejores-recetas/clasificacion/economica/">Económica</a>										</div>
+										<div class="entry-content-description">
+											<p>El <strong>arroz</strong> es uno de los alimentos más versátiles de todo el recetario. Así, hoy lo unimos a las verduras para crear una receta de lo más completa.</p>
+										</div>
+									</div><!-- .entry-content -->
+																
+								<footer class="entry-meta">
+									<div class="entry-meta-footer">
+											<div class="iconos-compartir">
+		<ul>
+			<li class="twitter">
+								<a rel="nofollow" title="Publicarlo en Twitter" class="item icono-compartir twitter" 
+					onClick="javascript:window.open('https://twitter.com/intent/tweet?url=http://#/gurme/recetas/verduras-con-arroz-al-horno-y-morcilla/&text=Verduras con arroz al horno y morcilla', 'TwitterWindow', 'width=800, height=600');" 
+					href="javascript:void(0)">
+						<i class="fa fa-twitter"></i>
+				</a>
+			</li>
+			<li class="facebook">
+								<a rel="nofollow" title="Publicar en Facebook" class="item icono-compartir facebook" 
+					onClick="javascript:window.open('https://www.facebook.com/sharer/sharer.php?u=http://#/gurme/recetas/verduras-con-arroz-al-horno-y-morcilla/', 'FacebookWindow', 'width=800, height=600');"
+					href="javascript:void(0)">
+						<i class="fa fa-facebook"></i>
+				</a>
+			</li>
+			
+									<li class="comments">
+				<a class="item icon-comment dsq-comment-count comment-link commentslink" data-disqus-identifier="" href="http://#/gurme/recetas/verduras-con-arroz-al-horno-y-morcilla/#commentsDiv">
+					<i class="fa fa-comment"></i>
+				</a>
+			</li>
+					</ul>		
+	</div>									</div><!-- end .entry-meta-footer -->
+										
+								</footer><!-- .entry-meta -->
+
+							</article><!-- #post -->
+											
+													
+							<article id="post-126205" class="post-126205 las-mejores-recetas type-las-mejores-recetas status-publish has-post-thumbnail hentry base-plato-verdurasylegumbres estacionalidad-todo-el-anio clasificaciones-saludable">
+								
+								<header class="entry-header">
+									
+																											
+																		 <a href="http://#/gurme/recetas/capas-de-verduras-asadas/"> 										<img src="sites/24/2015/03/capas-de-verduras-asadas-1-960x540.jpg" alt="Capas de verduras asadas: recetas con verduras" width="960" height="540" />
+									</a>	
+
+																		<h2 class="entry-title">
+										<a href="http://#/gurme/recetas/capas-de-verduras-asadas/" title="Capas de verduras asadas" rel="bookmark">											<span>Capas de verduras asadas</span>
+										</a>	
+									</h2>
+									
+								</header><!-- .entry-header -->
+								
+																	<div class="entry-content">
+										<div class="entry-content-tags">
+										<a href="https://#/gurme/las-mejores-recetas/clasificacion/economica/">Económica</a><a href="https://#/gurme/las-mejores-recetas/clasificacion/rapido-y-facil/">Rápido y Fácil</a><a href="https://#/gurme/las-mejores-recetas/clasificacion/saludable/">Saludable</a>										</div>
+										<div class="entry-content-description">
+											<p>Hoy proponemos un <strong>plato de verduras asadas</strong> que, al cocinarlas de esta manera, conseguimos que tomen un sabor diferente y muy apetitoso.</p>
+										</div>
+									</div><!-- .entry-content -->
+																
+								<footer class="entry-meta">
+									<div class="entry-meta-footer">
+											<div class="iconos-compartir">
+		<ul>
+			<li class="twitter">
+								<a rel="nofollow" title="Publicarlo en Twitter" class="item icono-compartir twitter" 
+					onClick="javascript:window.open('https://twitter.com/intent/tweet?url=http://#/gurme/recetas/capas-de-verduras-asadas/&text=Capas de verduras asadas', 'TwitterWindow', 'width=800, height=600');" 
+					href="javascript:void(0)">
+						<i class="fa fa-twitter"></i>
+				</a>
+			</li>
+			<li class="facebook">
+								<a rel="nofollow" title="Publicar en Facebook" class="item icono-compartir facebook" 
+					onClick="javascript:window.open('https://www.facebook.com/sharer/sharer.php?u=http://#/gurme/recetas/capas-de-verduras-asadas/', 'FacebookWindow', 'width=800, height=600');"
+					href="javascript:void(0)">
+						<i class="fa fa-facebook"></i>
+				</a>
+			</li>
+			
+									<li class="comments">
+				<a class="item icon-comment dsq-comment-count comment-link commentslink" data-disqus-identifier="" href="http://#/gurme/recetas/capas-de-verduras-asadas/#commentsDiv">
+					<i class="fa fa-comment"></i>
+				</a>
+			</li>
+					</ul>		
+	</div>									</div><!-- end .entry-meta-footer -->
+										
+								</footer><!-- .entry-meta -->
+
+							</article><!-- #post -->
+											
+													
+							<article id="post-126205" class="post-126205 las-mejores-recetas type-las-mejores-recetas status-publish has-post-thumbnail hentry base-plato-verdurasylegumbres estacionalidad-todo-el-anio clasificaciones-saludable">
+								
+								<header class="entry-header">
+									
+																											
+																		 <a href="http://#/gurme/recetas/verduras-a-la-parrilla-con-mousse-de-pato/"> 										<img src="sites/24/2010/08/1917_verdurasparrilla_1282476639.jpg" alt="Verduras a la parrilla con mousse de pato: recetas con verduras" width="465" height="260" />
+									</a>	
+
+																		<h2 class="entry-title">
+										<a href="http://#/gurme/recetas/verduras-a-la-parrilla-con-mousse-de-pato/" title="Verduras a la parrilla con mousse de pato" rel="bookmark">											<span>Verduras a la parrilla con mousse de pato</span>
+										</a>	
+									</h2>
+									
+								</header><!-- .entry-header -->
+								
+																	<div class="entry-content">
+										<div class="entry-content-tags">
+										<a href="https://#/gurme/las-mejores-recetas/clasificacion/economica/">Económica</a><a href="https://#/gurme/las-mejores-recetas/clasificacion/rapido-y-facil/">Rápido y Fácil</a>										</div>
+										<div class="entry-content-description">
+											<p>Esta <strong>parrillada</strong>, además de ser muy sencilla de elaborar y de estar deliciosa, es una receta muy nutritiva, pues nos va a aportar multitud de vitaminas, minerales, fibra y sustancias de acción antioxidante.</p>
+										</div>
+									</div><!-- .entry-content -->
+																
+								<footer class="entry-meta">
+									<div class="entry-meta-footer">
+											<div class="iconos-compartir">
+		<ul>
+			<li class="twitter">
+								<a rel="nofollow" title="Publicarlo en Twitter" class="item icono-compartir twitter" 
+					onClick="javascript:window.open('https://twitter.com/intent/tweet?url=http://#/gurme/recetas/verduras-a-la-parrilla-con-mousse-de-pato/&text=Verduras a la parrilla con mousse de pato', 'TwitterWindow', 'width=800, height=600');" 
+					href="javascript:void(0)">
+						<i class="fa fa-twitter"></i>
+				</a>
+			</li>
+			<li class="facebook">
+								<a rel="nofollow" title="Publicar en Facebook" class="item icono-compartir facebook" 
+					onClick="javascript:window.open('https://www.facebook.com/sharer/sharer.php?u=http://#/gurme/recetas/verduras-a-la-parrilla-con-mousse-de-pato/', 'FacebookWindow', 'width=800, height=600');"
+					href="javascript:void(0)">
+						<i class="fa fa-facebook"></i>
+				</a>
+			</li>
+			
+									<li class="comments">
+				<a class="item icon-comment dsq-comment-count comment-link commentslink" data-disqus-identifier="" href="http://#/gurme/recetas/verduras-a-la-parrilla-con-mousse-de-pato/#commentsDiv">
+					<i class="fa fa-comment"></i>
+				</a>
+			</li>
+					</ul>		
+	</div>									</div><!-- end .entry-meta-footer -->
+										
+								</footer><!-- .entry-meta -->
+
+							</article><!-- #post -->
+											
+											</div>
+						
+					</div><!-- .entry-content -->
+
+												
+																	<div class="OUTBRAIN" data-src="https://#/gurme/las-mejores-recetas/come-sano-con-estas-10-recetas-saludables-con-verduras/" data-widget-id="AR_1"></div>
+				
+
+																	
+					
+					<footer class="entry-meta">
+						
+						<div class="entry-options">
+							
+							<div class="clearfix">
+								
+								<div class="left">
+																			<div class="iconos-compartir">
+		<ul>
+			<li class="twitter">
+								<a rel="nofollow" title="Publicarlo en Twitter" class="item icono-compartir twitter" 
+					onClick="javascript:window.open('https://twitter.com/intent/tweet?url=https://#/gurme/las-mejores-recetas/come-sano-con-estas-10-recetas-saludables-con-verduras/&text=20 recetas con verduras para comer sano', 'TwitterWindow', 'width=800, height=600');" 
+					href="javascript:void(0)">
+						<i class="fa fa-twitter"></i>
+				</a>
+			</li>
+			<li class="facebook">
+								<a rel="nofollow" title="Publicar en Facebook" class="item icono-compartir facebook" 
+					onClick="javascript:window.open('https://www.facebook.com/sharer/sharer.php?u=https://#/gurme/las-mejores-recetas/come-sano-con-estas-10-recetas-saludables-con-verduras/', 'FacebookWindow', 'width=800, height=600');"
+					href="javascript:void(0)">
+						<i class="fa fa-facebook"></i>
+				</a>
+			</li>
+			
+									<li class="comments">
+				<a class="item icon-comment dsq-comment-count comment-link commentslink" data-disqus-identifier="" href="index.html#commentsDiv">
+					<i class="fa fa-comment"></i>
+				</a>
+			</li>
+					</ul>		
+	</div>								</div>
+								
+								<div class="right">
+																													
+																					<a href="index.html#commentsDiv" class="button radius small icono-comentar"> <i class="fa fa-comment-o"></i> Comentar </a>
+												
+																											</div>
+							</div>
+						</div>
+
+						<div class="entry-pagination-detail">
+														<nav class="nav-single">
+	<span class="nav-previous"><a href="https://#/gurme/las-mejores-recetas/cocinar-en-familia-20-recetas-contra-el-coronavirus/" rel="prev"><span class="meta-nav" title="Cocinar en familia: 20 Recetas contra el coronavirus">&laquo;</span> Anterior</a></span>
+	<span class="nav-next"><a href="https://#/gurme/las-mejores-recetas/diez-recetas-con-bacalao/" rel="next">Siguiente <span class="meta-nav" title="Diez recetas con bacalao como protagonista">&raquo;</span></a></span>
+</nav><!-- .nav-single -->						</div>
+						
+																		
+												        <div id="comments" class="comments-area">
+
+            <section id="disqus_thread" class="comentarios comentarios-noticia" name="comentarios">
+                <div class="voc-comments-title collapsed" aria-expanded="false">
+                    <span data-voc-comments-count="126205 http://gurme-origin.#/gurme/las-mejores-recetas/come-sano-con-estas-10-recetas-saludables-con-verduras/"
+                          data-voc-comments-count-zero-text="Deja tu comentario"
+                          data-voc-comments-count-show-zero="false"
+                          data-voc-comments-count-with-literal="true"
+                          data-voc-comments-count-action="abc:comments:count">
+                        Comentarios
+                    </span>
+                    <span class="icono ver-comentarios">
+                        <svg viewbox="0 0 24 24">
+                            <path d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"></path>
+                        </svg>
+                    </span>
+                </div>
+                <div id="comments-container" data-voc-comments
+                     data-voc-comments-stream-id="126205 http://gurme-origin.#/gurme/las-mejores-recetas/come-sano-con-estas-10-recetas-saludables-con-verduras/"
+                     data-voc-comments-section="blogsabc"
+                     data-voc-comments-template-name="abc2017"
+                     data-voc-comments-template="vocento.config.nibara.comments.abc2017"
+                     data-voc-comments-view-ondemand
+                     data-voc-comments-enabled-shared-providers="facebook">
+                </div>
+            </section>
+
+        </div>
+							
+					</footer><!-- .entry-meta -->
+					
+				</div><!-- #wdg-posts-entry -->
+
+				
+<aside id="secondary" class="medium-4 large-4 columns" role="complementary" data-sticky_parent>
+			<div class="widget-area" data-sticky_column>
+			<aside id="text-33" class="widget  widget_text">			<div class="textwidget"><div data-voc-vam data-voc-vam-position="robapaginas"></div></div>
+		</aside>		</div>
+	</aside><!-- #secondary -->
+			</div><!-- .row -->
+			
+		</article><!-- #post -->
+
+		
+	</section><!-- #content -->
+
+
+            <div id="wrap-abc-4-0">
+            <div id="columna-abc-4-0" class="widget-area">
+                    <div class="row">
+                            <aside id="text-73" class="widget full widget_text">			<div class="textwidget">
+<div data-voc-vam data-voc-vam-position="megabanner"></div>
+
+<div style="margin-bottom:25px;"></div>
+</div>
+		</aside>                    </div>
+            </div>
+        </div><!-- #wrap-abc-4 -->
+    
+        </section><!-- end .content-wrap -->
+    </main>
+
+  </div><!-- end .content_container -->
+
+        
+        <!-- init footer -->
+<footer data-sticky_separator id="footer" role="contentinfo"> <div class="row"><div class="medium-12 large-12 columns"><div class="text-center"><p class="h1 logo footer-sevilla"><div class="small-3 medium-3 large-3 columns">&nbsp;</div><div class="small-6 medium-6 large-6 columns"><a href="https://#/gurme//" title="Gurmé" rel="home"><img alt="Gurmé Sevilla" src="https://static-#/gurme//wp-content/uploads/2016/03/GURME_sevilla_logo.png"/></a></div><div class="small-3 medium-3 large-3 columns">&nbsp;</div></p></div><div class="site-info columns cntr"><ul><li><a href="javascript:void(0);" class="cmpLink" title="Política de cookies">POLÍTICA DE COOKIES</a></li><li><a title="POLÍTICA DE PRIVACIDAD" href="http://www.vocento.com/politica-privacidad/">POLÍTICA DE PRIVACIDAD</a></li><li><a title="AVISO LEGAL" href="http://#/contacto/aviso-legal.html">AVISO LEGAL</a></li><li><a title="CONDICIONES DE USO" href="http://#/contacto/condiciones.html">CONDICIONES DE USO</a></li></ul></div><div class="footer-tags medium-12 large-12 columns cntr"><ul class="footer-entry-tags"><li class="divider"></li><li id="menu-item-304404" class="menu-item menu-item-tag-menu menu-item-bares-y-restaurantes-de-sevilla"><a href="https://#/gurme//bares-y-restaurantes-sevilla/">Bares y Restaurantes de Sevilla</a></li><li class="divider"></li><li id="menu-item-304405" class="menu-item menu-item-tag-menu menu-item-recetas-de-cocina"><a href="https://#/gurme//recetas-de-cocina/">Recetas de Cocina</a></li></ul></div></div></div><div class="footer-bottom"><div class="row"><div class="medium-12 large-12 columns"><ul class="social-profiles" role="navigation"><li><span class="item disabled">Síguenos</span></li><li><a href="https://www.facebook.com/GurmeSevilla/" title="Facebook" class="item"><i class="fa fa-facebook"></i></a></li><li><a href="https://twitter.com/GURMESevilla" title="Twitter" class="item"><i class="fa fa-twitter"></i></a></li><li><a href="https://www.instagram.com/gurmesevilla/" title="Cuenta de instagram de gurmé Sevilla" class="item"><i class="fa fa-instagram"></i></a></li></ul></div></div><div class="nav_container abc-bottom-nav"><div class="row"><nav class="bottom-bar-abc medium-12 large-12 columns"><span class="abc-logo"></span><section class="bottom-bar-section"><ul id="menu-menu-superior-1" class="footer-menu"><li id="menu-item-10848" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-10848"><a href="https://#/deportes/alfinaldelapalmera/">Al Final de la Palmera</a></li><li id="menu-item-298068" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-298068"><a href="https://#/deportes/orgullodenervion/">Orgullo de Nervión</a></li><li id="menu-item-10850" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-10850"><a href="https://#/pasionensevilla/">Pasión en Sevilla</a></li><li id="menu-item-10853" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-10853"><a href="https://#/estilo/bulevarsur">Bulevar Sur</a></li><li id="menu-item-10849" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-10849"><a href="https://#/mobility/">Mobility</a></li><li id="menu-item-10852" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-10852"><a href="http://sevillasolidaria.#/">Sevilla Solidaria</a></li></ul></section></nav></div></div></div></footer>
+<!-- end footer -->
+
+        <div id="backtotop" class="hvr-fade">
+
+            <span class="button tiny round">
+
+                <i class="fa fa-angle-up fa-2x"></i>
+
+            </span>
+
+        </div><!-- #backtotop -->
+
+        <!-- init jsFooter -->
+<script src="https://static.vocento.com/voonto2/latest/migrate.js" data-vendors="cookies,is,jquery,lazyload"></script>
+<script>
+	 Promise.all([
+    	Voonto.ready,
+        Voonto.require('jquery'),
+        Voonto.require('cookies'),
+        Voonto.require('is'),
+        Voonto.require('lazyload')
+    ]).then(function ([app, $, cookies, is, LazyLoad]) {
+    	window.$ = window.jQuery;
+        window.vocento.config = window.vocento.config || {};
+        app.load(window.vocento.config.nibara.vocUserPath + '/vocento-vocuser-preloader.js?v=' + window.vocento.config.nibara.vocUserVersion);
+        app.load(window.vocento.config.nibara.vamPath + '/vam.js');
+        app.load(window.vocento.config.nibara.videoPlayerVersionPath + "/video-player.js");
+        app.load(window.vocento.config.nibara.path + "/post-script.js");
+        app.load(window.vocento.config.nibara.path + "/postscript.js");
+        app.load(window.vocento.config.nibara.libPath + "jquery-inview-tea3/jquery.inview.min.js");
+	});
+    
+    function toggleNav() {
+        let navTrigger = document.getElementById('nav-trigger');
+        let header = document.querySelector('header');
+        navTrigger.classList.toggle('active');
+        header.classList.toggle('active');
+    }
+</script>
+<!-- end jsFooter -->
+        <script>
+            Voonto.ready.then(function(app) {
+
+                // Eliminado en la integración Vocento Header API
+                // app.load('//static.vocento.com/vam/3.13.3/vam.js');
+
+                // Cargar los restantes scripts movidos por las dependencias de jQuery
+	            
+                app.load("https://#/gurme/wp-content/themes/wp-forgesevilla/library-abc/js/jquery_cookie.js?v=14");
+                app.load("https://#/gurme/wp-content/themes/wp-forgesevilla/library-abc/js/jquery.cookie.js?v=13");
+                app.load("https://#/gurme/wp-content/themes/wp-forgesevilla/library-abc/js/custom_script_gurme.js?a=2");
+                app.load("https://#/gurme/wp-content/plugins/version-movil-sevilla-cordoba/js/isMobile.js");
+
+            });
+        </script>
+
+        <script type='text/javascript' src='version-movil-sevilla-cordoba/js/script_change_v005.js'></script>
+<script>Voonto.ready.then(function(app) { app.load( "https://#/gurme/wp-content/themes/wp-forgesevilla/js/wpforge-functions.js?ver=5.5.3"); });</script><script type='text/javascript' src='abc-algolia-cordoba-fix/js/js-algolia-fix.js@ver=4.9.10'></script>
+<script>Voonto.ready.then(function(app) { app.load("https://#/gurme/wp-includes/js/jquery/ui/core.min.js").then(() => {app.load("https://#/gurme/wp-includes/js/jquery/ui/widget.min.js").then(() => {app.load("https://#/gurme/wp-includes/js/jquery/ui/position.min.js").then(() => {app.load("https://#/gurme/wp-includes/js/jquery/ui/menu.min.js").then(() => {app.load("https://#/gurme/wp-includes/js/jquery/ui/autocomplete.min.js");});});});});});</script><script>Voonto.ready.then(function(app) { app.load( "https://#/gurme/wp-includes/js/wp-a11y.min.js"); });</script><script type='text/javascript'>
+/* <![CDATA[ */
+var uiAutocompleteL10n = {"noResults":"Sin resultados.","oneResult":"1 result found. Use up and down arrow keys to navigate.","manyResults":"%d results found. Use up and down arrow keys to navigate.","itemSelected":"Item selected."};
+/* ]]> */
+</script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var mvnAlgSearchVars = {"inputSearchName":"s","containerId":"mvn-alg-predictions","postsPerPage":"5"};
+var mvnAlgTemplates = {"post":"<a class=\"mvn-alg-item-link\" href="https://#/gurme/las-mejores-recetas/come-sano-con-estas-10-recetas-saludables-con-verduras/\&quot;{permalink}\&quot;">\n\t\t<span class=\"mvn-alg-item-title\">{title}<\/span>\n\t<\/a>\n","taxonomy":"<a class=\"mvn-alg-cat-link\" href="https://#/gurme/las-mejores-recetas/come-sano-con-estas-10-recetas-saludables-con-verduras/\&quot;{permalink}\&quot;">\n\t<span class=\"mvn-alg-cat-title\">{title}<\/span>\n<\/a>"};
+/* ]]> */
+</script>
+<script>Voonto.ready.then(function(app) { app.load( "https://#/gurme/wp-content/plugins/maven-algolia/front/assets/scripts/predictions.js"); });</script><script>Voonto.ready.then(function(app) { app.load( "https://#/gurme/wp-content/themes/gurmesevilla/js/gurme-functions.js?ver=3.9"); });</script><script>Voonto.ready.then(function(app) { app.load("https://#/gurme/wp-content/themes/wp-forgesevilla/js/foundation.min.js?ver=5.5.3").then(() => {app.load("https://#/gurme/wp-content/themes/wp-forgesevilla/js/load-foundation.js?ver=5.5.2").then(() => {app.load("https://#/gurme/wp-content/themes/wp-forgesevilla/js/foundation/foundation.interchange.js?ver=5.5.3");app.load("https://#/gurme/wp-content/themes/wp-forgesevilla/js/foundation/foundation.accordion.js?ver=5.5.3");});});});</script><script type='text/javascript' src='wp-embed.min.js'></script>
+<script type='text/javascript' src='https://widgets.outbrain.com/outbrain.js?ver=1.0.1'></script>
+
+                        
+    <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam-cell.nr-data.net","licenseKey":"c72ce647f9","applicationID":"471643573","transactionName":"NFwBY0dZDEtZW0dcDQ0WIlRBUQ1WF0taWwUPXE5bVEtPVV1SXEcHEBQRUlZdFllL","queueTime":0,"applicationTime":2078,"atts":"GBsCFQ9DH0U=","errorBeacon":"bam-cell.nr-data.net","agent":""}</script></body>
+</html>

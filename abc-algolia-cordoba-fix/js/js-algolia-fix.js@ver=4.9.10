@@ -1,0 +1,13 @@
+/*jQuery( document ).ready(function() {
+        if(window.location.href.indexOf("resultados-bares-restaurantes-cordoba") > -1) {
+       jQuery('#searchform_bares_restaurantes').attr('action', '/gurme/resultados-bares-restaurantes-cordoba');
+    }
+});*/
+
+window.onload = function() {
+   if(window.location.href.indexOf("resultados-bares-restaurantes-cordoba") > -1) {
+	   var form = document.getElementById('searchform_bares_restaurantes');
+		form.setAttribute('action', '/gurme/resultados-bares-restaurantes-cordoba');
+
+    }
+};

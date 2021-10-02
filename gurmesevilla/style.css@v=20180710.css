@@ -1,0 +1,15 @@
+﻿/*
+Theme Name: Forge Gurmé Sevilla
+Theme URI: http://themeawesome.com/wordpress-child-theme
+Description: Theme ABCDESEVILLA
+Author: ThemeAwesome.com
+Author URI: http://themeawesome.com/
+Template: wp-forgesevilla
+Version: 3.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.1.html
+Tags: light, gray, white, one-column, two-columns, right-sidebar, custom-background, custom-header, custom-menu, editor-style, featured-images, full-width-template, microformats, post-formats, rtl-language-support, sticky-post, translation-ready
+Text Domain: gurme
+Start adding your theme specific styles below.
+*/
+@import url("gurme.css@v=20180710.css");

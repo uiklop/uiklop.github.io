@@ -1,0 +1,419 @@
+/* estilos iframe por cambio de version */
+#text-52 iframe, #text-53 iframe {
+    height: 600px;
+    width: 300px;
+}
+
+/* estilos de comentarios */
+.comments-area {
+    margin-bottom: 20px;
+}
+
+.comentarios {
+    width: 100%
+}
+
+.comentarios+.data {
+    margin-top: 20px
+}
+
+.comentarios-noticia .collapse {
+    display: none
+}
+
+.comentarios-noticia .voc-comments-title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+    height: 46px;
+    font-family: "ABC Display",serif;
+    font-size: 25px;
+    font-weight: 400!important;
+    line-height: 47px;
+    color: #244765;
+    border-bottom: 1px solid #ddd
+}
+
+.comentarios-noticia .voc-comments-title span {
+    -webkit-box-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    display: inline-block;
+    margin-right: 6px;
+    font-size: 25px;
+    font-family: "Barlow",sans-serif;
+    font-weight: 700;
+}
+
+.comentarios-noticia .voc-comments-title .icono {
+    -webkit-box-flex: 0 1 auto;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 46px;
+    height: 46px;
+    margin-right: 12px;
+    padding: 6px 8px 8px 8px;
+    background-color: #f3f3f3
+}
+
+.comentarios-noticia .voc-comments-title .icono svg {
+    max-width: 30px;
+    max-height: 30px;
+    fill: #4a90e2
+}
+
+.comentarios-noticia .voc-comments-title[aria-expanded=true] .icono svg {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg)
+}
+
+.comentarios-noticia .gig-comments-header {
+    display: none;
+    text-align: left;
+}
+
+.comentarios-noticia .comentarios {
+    text-align: center;
+}
+
+.comentarios-noticia .gig-comment {
+    text-align: left!important
+}
+
+.comentarios-noticia .gig-comment-photo {
+    position: absolute;
+    top: 13px;
+    left: 0
+}
+
+.comentarios-noticia .gig-comment-photo .gig-comment-img {
+    width: 30px;
+    height: 30px!important;
+    border-radius: 15px
+}
+
+.comentarios-noticia .gig-comment-providerLogo {
+    position: absolute;
+    top: 18px;
+    left: 18px;
+    z-index: 2
+}
+
+.comentarios-noticia .gig-comment-providerLogo img {
+    -webkit-box-shadow: 0 2px 4px rgba(0,0,0,.25);
+    box-shadow: 0 2px 4px rgba(0,0,0,.25);
+    border-radius: 50%
+}
+
+.comentarios-noticia .gig-comment-replies .gig-comment {
+    padding-left: 25px
+}
+
+.comentarios-noticia article {
+    position: relative
+}
+
+.comentarios-noticia .gig-comment-self-data {
+    padding: 20px 0 20px 40px;
+    border-top: 1px dotted #ddd
+}
+
+.comentarios-noticia .gig-comment-header-left {
+    margin-bottom: 10px;
+    font-size: 11px;
+    color: #888
+}
+
+.comentarios-noticia .gig-comment-header-left .gig-comment-username {
+    font-size: 13px;
+    font-weight: 700;
+    color: #244765
+}
+
+.comentarios-noticia .gig-comment-body {
+    margin-bottom: 10px;
+    font-size: 13px;
+    line-height: 1.28;
+    color: #555
+}
+
+.comentarios-noticia .gig-comments-linksContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 11px;
+    color: #888
+}
+
+.comentarios-noticia .gig-comments-linksContainer>* {
+    margin-right: 10px
+}
+
+.comentarios-noticia .gig-comments-linksContainer>:last-of-type {
+    margin-right: 0
+}
+
+.comentarios-noticia .gig-comments-linksContainer a {
+    font-weight: 700
+}
+
+.comentarios-noticia .gig-comment-vote-neg,.comentarios-noticia .gig-comment-vote-pos {
+    background-image: none!important;
+    background: 0 0!important
+}
+
+.comentarios-noticia .gig-comment-vote-with-value {
+    position: relative;
+    margin-right: 10px;
+    padding-left: 20px
+}
+
+.comentarios-noticia .gig-comment-vote-with-value:last-of-type {
+    margin-right: 0
+}
+
+.comentarios-noticia .gig-comment-vote-with-value:after {
+    position: absolute;
+    left: 0;
+    width: 16px;
+    height: 16px
+}
+
+.comentarios-noticia .gig-comment-vote-with-value.gig-comment-vote-pos:after {
+    top: -3px;
+    content: url('https://static1-sevilla.abc.es/assets/latest/img/thumbs-up.svg')
+}
+
+.comentarios-noticia .gig-comment-vote-with-value.gig-comment-vote-neg:after {
+    content: url('https://static1-sevilla.abc.es/assets/latest/img/thumbs-down.svg')
+}
+
+.comentarios-noticia .gig-comments-more,.comentarios-noticia .voc-comment-more {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    display: inline-block;
+    width: 100%;
+    height: 40px;
+    margin-top: 10px;
+    padding: 0 20px;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 40px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+    background-color: #4a90e2;
+    border-radius: 4px
+}
+
+.comentarios-noticia .gig-comments-more:hover,.comentarios-noticia .voc-comment-more:hover {
+    cursor: pointer;
+    background-color: #1f69c1
+}
+
+.comentarios-noticia .acceso-comentarios>span:first-of-type {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 13px;
+    text-align: center;
+    color: #888
+}
+
+.comentarios-noticia .acceso-comentarios .boton {
+    display: block;
+    text-align: center;
+    text-transform: uppercase
+}
+
+.comentarios-noticia .acceso-comentarios .accion {
+    float: none
+}
+
+.comentarios-noticia .enviar-comentario .gig-composebox-textarea {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin-top: 0!important;
+    padding: 15px;
+    text-align: left;
+    content: ' ';
+    background-color: #fff;
+    -webkit-box-shadow: inset 0 2px 6px rgba(0,0,0,.25);
+    box-shadow: inset 0 2px 6px rgba(0,0,0,.25)
+}
+
+.comentarios-noticia .enviar-comentario .gig-comments-button {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    display: block;
+    height: 40px;
+    padding: 0 14px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff
+}
+
+.comentarios-noticia .gig-comments-composebox {
+    display: block;
+    margin-bottom: -1px;
+    padding: 25px 20px;
+    text-align: center;
+    background-color: #f3f3f3
+}
+
+.comentarios-noticia .gig-comments-composebox .gigya-logged-in,.comentarios-noticia .gig-comments-composebox .gigya-logged-out {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    height: auto
+}
+
+.comentarios-noticia .gig-comments-composebox .gig-composebox-editor {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 0!important;
+    border: 0!important
+}
+
+.comentarios-noticia .gig-comments-composebox .gig-composebox-editor .gig-composebox-textarea {
+    padding: 15px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #2b2b2b
+}
+
+.comentarios-noticia .gig-comments-composebox .gig-composebox-post {
+    line-height: 40px!important;
+    text-transform: uppercase;
+    border: 0!important;
+    background: 0 0!important;
+    background-color: #4a90e2!important;
+    border-radius: 4px
+}
+
+.comentarios-noticia .gig-comments-composebox .boton.esquinas {
+    overflow: hidden
+}
+
+.comentarios-noticia .gig-comments-composebox .gig-composebox-site-login {
+    text-align: center;
+    color: #fff!important;
+    border: 0!important;
+    -webkit-box-shadow: inset 0 0 0 transparent;
+    box-shadow: inset 0 0 0 transparent;
+    background: #4a90e2;
+    background: -webkit-gradient(linear,left top,left bottom,from(#4a90e2),to(#4a90e2));
+    background: linear-gradient(to bottom,#4a90e2,#4a90e2)
+}
+
+.comentarios-noticia .gig-comments-composebox p {
+    margin-bottom: 0
+}
+
+.comentarios-noticia .gig-comment-data {
+    padding-left: 0!important
+}
+
+.comentarios-noticia .gig-comment {
+    width: auto!important
+}
+
+.comentarios-noticia .gig-comments-container {
+    width: 100%!important;
+    text-align: center!important
+}
+
+.comentarios-noticia .gig-comment-time {
+    float: none!important;
+    margin: 0!important
+}
+
+.comentarios-noticia .gig-comment-footer {
+    padding-bottom: 0!important;
+    border-bottom: 0!important
+}
+
+.comentarios-noticia .voc-comment-collapsed {
+    overflow: hidden;
+    max-height: 3em;
+    background: -webkit-linear-gradient(#333,#eee);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent
+}
+
+.comentarios-noticia .gig-comment .voc-comment-expand {
+    display: inline-block;
+    padding: 4px;
+    margin: 5px 0;
+    font-size: 11px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+    background-color: #4a90e2;
+    border-radius: 4px
+}
+
+@media (max-width: 660px) {
+    .comentarios-noticia .voc-comments-title span {
+        font-size: 21px
+    }
+
+    .comentarios-noticia .acceso-comentarios {
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        margin: -1px 0;
+        padding: 15px 0
+    }
+
+    .comentarios-noticia .gig-comments-composebox {
+        position: relative;
+        z-index: 2;
+        margin: 0 0 -1px;
+        padding: 15px 10px
+    }
+
+    .comentarios-noticia .gig-comments-container {
+        font-size: 14px!important
+    }
+
+    .comentarios-noticia .gig-comments-container .accion {
+        font-size: 11px
+    }
+
+    .comentarios-noticia .gig-composebox-post {
+        font-size: 12px!important
+    }
+
+    .comentarios-noticia .gig-comments-container {
+        padding: 0!important
+    }
+
+    .comentarios-noticia .gig-comment-footer * {
+        font-size: 11px!important
+    }
+
+    .comentarios-noticia .gig-comments-linksContainer {
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap
+    }
+
+    .comentarios-noticia .gig-comments-linksContainer li:after {
+        display: none!important
+    }
+
+    .comentarios-noticia .gig-comment-vote-with-value.gig-comment-neg-pos:after,.comentarios-noticia .gig-comment-vote-with-value.gig-comment-vote-pos:after {
+        top: 2px!important
+    }
+
+    .comentarios-noticia .gig-comment-replies .gig-comment {
+        padding-left: 5px
+    }
+}
